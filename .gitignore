@@ -2,3 +2,7 @@
 *.ide-wal
 *.ide-shm
 *.ide
+.vs/
+bin/
+obj/
+packages/
