@@ -53,14 +53,14 @@
 /* 01 - PRIMARY RESET START */
 /************************************/
 /* @imports */
-@import url('css/bootstrap.min.css');
-@import url('css/font-awesome.min.css');
-@import url('css/icon.css');
-@import url('css/brands.css');
-@import url('css/animate.css');
-@import url('css/magnific-popup.css');
-@import url('css/owl.carousel.css');
-@import url('css/reset.css');
+@import url('bootstrap.min.css');
+@import url('font-awesome.min.css');
+@import url('icon.css');
+@import url('brands.css');
+@import url('animate.css');
+@import url('magnific-popup.css');
+@import url('owl.carousel.css');
+@import url('reset.css');
 
 /* theme colors */
 .c1 {color: #6abe52 !important;}
@@ -93,13 +93,14 @@
 }
 
 .op-header {
-  background: url(img/bg/12.png) no-repeat center center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  padding-top: 104px;
-  padding-bottom: 137px;
-  position: relative;
-  z-index: 2;
+    background: url(../images/bg/12.png) no-repeat center center;
+  //  background: url(../images/bg/12.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-top: 104px;
+    padding-bottom: 137px;
+    position: relative;
+    z-index: 2;
 }
 /* section-header end */
 
@@ -343,17 +344,18 @@
 }
 
 .social-nav a {
-  width: 44px;
-  height: 44px;
-  display: block;
-  text-align: center;
-  background: url(img/icon-holder/01.png) no-repeat center center !important;
-  -webkit-background-size: cover;
-  background-size: cover;
+    width: 44px;
+    height: 44px;
+    display: block;
+    text-align: center;
+    background: url(../images/icon-holder/01.png) no-repeat center center !important;
+    /*background: url(/images/icon-holder/01.png) no-repeat center center !important;*/
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .social-nav a:hover {
-  background: url(img/icon-holder/03.png) no-repeat center center !important;
+  background: url(../images/icon-holder/03.png) no-repeat center center !important;
 }
 
 .social-nav a .fa {
@@ -544,7 +546,7 @@
 
 .main-slider.ms1 .banner-carousel {
   height: 796px;
-  background: url(img/bg/01.png) no-repeat center center;
+  background: url(../images/bg/01.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -559,19 +561,19 @@
 }
 
 [data-item="1"] {
-  background: url(img/bg/01.png) no-repeat bottom center;
+  background: url(../images/bg/01.png) no-repeat bottom center;
 }
 
 [data-item="2"] {
-  background: url(img/bg/02.png) no-repeat bottom center;
+  background: url(../images/bg/02.png) no-repeat bottom center;
 }
 
 [data-item="3"] {
-  background: url(img/bg/03.png) no-repeat bottom center;
+  background: url(../images/bg/03.png) no-repeat bottom center;
 }
 
 [data-item="4"] {
-  background: url(img/bg/04.png) no-repeat bottom center;
+  background: url(../images/bg/04.png) no-repeat bottom center;
 }
 
 .banner-carousel .owl-dots {
@@ -626,7 +628,7 @@
   width: 92px;
   height: 89px;
   text-align: center;
-  background: url(img/icon-holder/02.png) no-repeat center center;
+  background: url(../images/icon-holder/02.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   display: block;
@@ -779,7 +781,7 @@
   -ms-transform: translateY(70%);
   -o-transform: translateY(70%);
   transform: translateY(70%);
-  background: url(img/icon-holder/01.png) no-repeat center center;
+  background: url(../images/icon-holder/01.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 
@@ -788,7 +790,7 @@
 }
 
 .intro1 .item:hover .item-txt > .rdm {
-  background: url(img/icon-holder/03.png) no-repeat center center;
+  background: url(../images/icon-holder/03.png) no-repeat center center;
 }
 
 .intro1 .item:hover .item-txt > .rdm .fa {
@@ -856,7 +858,7 @@
   text-align: center;
   display: inline-block;
 
-  background: url(img/icon-holder/08.png) no-repeat center center;
+  background: url(../images/icon-holder/08.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -883,7 +885,7 @@
 }
 
 .intro2 .items-area {
-  background: url(img/bg/09.png) no-repeat center center;
+  background: url(../images/bg/09.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   padding-bottom: 140px;
@@ -933,7 +935,7 @@
   -ms-transform: translate(-50%, 50%);
   -o-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%);
-  background: url(img/icon-holder/01.png) no-repeat center center;
+  background: url(../images/icon-holder/01.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 
@@ -942,7 +944,7 @@
 }
 
 .intro2 .items-area .item:hover .rdm {
-  background: url(img/icon-holder/03.png) no-repeat center center;
+  background: url(../images/icon-holder/03.png) no-repeat center center;
 }
 
 .intro2 .items-area .item:hover .rdm .fa {
@@ -963,7 +965,7 @@
 }
 
 .txt-row {
-  background: url(img/bg/05.png) no-repeat center center;
+  background: url(../images/bg/05.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   padding-top: 120px;
@@ -1003,7 +1005,7 @@
   height: 89px;
   display: block;
   text-align: center;
-  background: url(img/icon-holder/02.png) no-repeat center center;
+  background: url(../images/icon-holder/02.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -1115,7 +1117,7 @@
 /* 08 - FACTS START */
 /************************************/
 .facts-area {
-  background: url(img/bg/06.png) no-repeat center center;
+  background: url(../images/bg/06.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   padding-top: 122px;
@@ -1136,7 +1138,7 @@
   margin-bottom: 38px;
   text-align: center;
   line-height: 123px;
-  background: url(img/icon-holder/04.png) no-repeat center center;
+  background: url(../images/icon-holder/04.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   color: #118442;
@@ -1147,7 +1149,7 @@
 
 .fact-container:hover .single-fact > span {
   color: #111c16;
-  background: url(img/icon-holder/05.png) no-repeat center center;
+  background: url(../images/icon-holder/05.png) no-repeat center center;
 }
 
 .fact-title {
@@ -1201,7 +1203,7 @@
   font-size: 18px;
   line-height: 20px;
   padding-top: 35px;
-  background: url(img/icon-holder/06.png) no-repeat center center;
+  background: url(../images/icon-holder/06.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   z-index: 2;
@@ -1320,7 +1322,7 @@
   width: 44px;
   height: 44px;
   margin-top: 51px;
-  background: url(img/icon-holder/01.png) no-repeat center center;
+  background: url(../images/icon-holder/01.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -1337,7 +1339,7 @@
 }
 
 .project-single:hover > .rdm {
-  background: url(img/icon-holder/03.png) no-repeat center center;
+  background: url(../images/icon-holder/03.png) no-repeat center center;
 }
 
 .project-single:hover > .rdm i {
@@ -1449,13 +1451,13 @@
   height: 44px;
   text-align: center;
   display: block;
-  background: url(img/icon-holder/01.png) no-repeat center center;
+  background: url(../images/icon-holder/01.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .project-sidebar ul a:hover {
-  background: url(img/icon-holder/03.png) no-repeat center center !important;
+  background: url(../images/icon-holder/03.png) no-repeat center center !important;
 }
 
 .project-sidebar ul a:hover .fa {
@@ -1481,7 +1483,7 @@
 /* 10 - TESTIMONY START */
 /************************************/
 .testimony {
-  background: url(img/bg/07.png) no-repeat center center;
+  background: url(../images/bg/07.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   padding-bottom: 113px;
@@ -1631,7 +1633,7 @@
 .event {
   padding-top: 120px;
   padding-bottom: 120px;
-  background: url(img/bg/10.jpg);
+  background: url(../images/bg/10.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
@@ -1709,7 +1711,7 @@
   content: '';
   width: 100%;
   height: calc(100% + 20px);
-  background: url(img/bg/13.png) no-repeat center center;
+  background: url(../images/bg/13.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   bottom: 0;
@@ -1759,13 +1761,13 @@
   display: block;
   text-align: center;
   line-height: 44px;
-  background: url(img/icon-holder/09.png) no-repeat center center;
+  background: url(../images/icon-holder/09.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .member-info ul a:hover {
-  background: url(img/icon-holder/03.png) no-repeat center center !important;
+  background: url(../images/icon-holder/03.png) no-repeat center center !important;
 }
 
 .member-info ul a:hover .fa {
@@ -1819,7 +1821,7 @@
 /* 14 - PROCESS START */
 /************************************/
 .process {
-  background: url(img/bg/11.png) no-repeat center center;
+  background: url(../images/bg/11.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   padding-top: 120px;
@@ -1887,7 +1889,7 @@
 }
 
 .process-txt li i {
-  background: url(img/icon-holder/03.png) no-repeat center center;
+  background: url(../images/icon-holder/03.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 
@@ -1952,7 +1954,7 @@
   height: 81px;
   display: block;
   border-radius: 100%;
-  background: url(img/icon-holder/12.png) no-repeat center center;
+  background: url(../images/icon-holder/12.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   color: #fff;
@@ -1988,7 +1990,7 @@
 }
 
 .volunteer-banner {
-  background: url(img/volunteer/04.jpg) no-repeat center center;
+  background: url(../images/volunteer/04.jpg) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   border-radius: 3px;
@@ -2020,7 +2022,7 @@
   line-height: 105px;
   font-size: 50px;
   display: block;
-  background: url(img/icon-holder/10.png) no-repeat center center;
+  background: url(../images/icon-holder/10.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   text-align: center;
@@ -2053,7 +2055,7 @@
   -ms-transform: scale(2);
   -o-transform: scale(2);
   transform: scale(2);
-  background: url(img/icon-holder/11.png) no-repeat center center;
+  background: url(../images/icon-holder/11.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   color: #fff !important;
@@ -2210,13 +2212,13 @@
   height: 44px;
   text-align: center;
   display: block;
-  background: url(img/icon-holder/01.png) no-repeat center center;
+  background: url(../images/icon-holder/01.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .share-news a:hover {
-  background: url(img/icon-holder/03.png) no-repeat center center;
+  background: url(../images/icon-holder/03.png) no-repeat center center;
 }
 
 .share-news li:not(:last-of-type) {
@@ -2506,9 +2508,9 @@
 /* 18 - FOOTER START */
 /************************************/
 footer {
-  background: url(img/bg/08.png) no-repeat center center;
-  -webkit-background-size: cover;
-  background-size: cover;
+    background: url(../images/icon-holder/08.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .footer-top {
@@ -2523,13 +2525,13 @@ footer {
   display: block;
   text-align: center;
   line-height: 48px;
-  background: url(img/icon-holder/07.png) no-repeat center center;
+  background: url(../images/icon-holder/07.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .footer-top li a:hover {
-  background: url(img/icon-holder/03.png) no-repeat center center !important;
+  background: url(../images/icon-holder/03.png) no-repeat center center !important;
 }
 
 .footer-top li a:hover .fa {
