@@ -1,0 +1,214 @@
+.owl-item .ms1-item > img,
+.owl-item .head-lines h1,
+.owl-item .item-inner > p,
+.owl-item .slider-icon,
+.owl-item .thm-btn {
+	visibility: hidden;
+  	opacity: 0;
+  	-webkit-transition: all .2s ease 0s;
+  	transition: all .2s ease 0s;
+}
+
+.owl-item.active .ms1-item > img {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all .2s ease 0s;
+  	transition: all .2s ease 0s;
+}
+
+.owl-item.active .ms1-item .head-lines h1 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+	-webkit-animation-delay: .9s;
+	animation-delay: .9s;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all .2s ease .9s;
+  	transition: all .2s ease .9s;
+}
+
+.owl-item.active .ms2-item .head-lines h1 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+	-webkit-animation-delay: .9s;
+	animation-delay: .9s;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all .2s ease .9s;
+  	transition: all .2s ease .9s;
+}
+
+.owl-item.active .ms1-item .head-lines h1:nth-of-type(2) {
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-transition: all .2s ease 1s;
+  	transition: all .2s ease 1s;
+}
+
+.owl-item.active .ms1-item .head-lines h1:nth-of-type(3) {
+	-webkit-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+	-webkit-transition: all .2s ease 1.2s;
+  	transition: all .2s ease 1.2s;
+}
+
+.owl-item.active .item-inner > p {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: slideInUp;
+	animation-name: slideInUp;
+	-webkit-animation-delay: 1.7s;
+	animation-delay: 1.7s;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all .2s ease 1.7s;
+  	transition: all .2s ease 1.7s;
+}
+
+.owl-item.active .slider-icon {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+	-webkit-animation-delay: 1.9s;
+	animation-delay: 1.9s;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all .2s ease 1.9s;
+  	transition: all .2s ease 1.9s;
+}
+
+.owl-item.active .thm-btn {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: slideInUp;
+	animation-name: slideInUp;
+	-webkit-animation-delay: 1.9s;
+	animation-delay: 1.9s;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity .2s ease 1.9s, visibility .2s ease 1.9s, color .3s ease .2s;
+  	transition: opacity .2s ease 1.9s, visibility .2s ease 1.9s, color .3s ease .2s;
+}
+
+.owl-item.active .thm-btn:last-of-type {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: slideInUp;
+	animation-name: slideInUp;
+	-webkit-animation-delay: 2.2s;
+	animation-delay: 2.2s;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity .2s ease 2.2s, visibility .2s ease 2.2s, color .3s ease .2s;
+  	transition: opacity .2s ease 2.2s, visibility .2s ease 2.2s, color .3s ease .2s;
+}
+/* slider effects end */
+
+/* thm-btn hover effects start */
+.thm-btn:hover {
+  color: #fff !important;
+}
+/* thm-btn hover effects end */
+
+.social-nav a:hover,
+.footer-top ul li a:hover {
+	-webkit-animation-duration: .75s;
+	animation-duration: .75s;
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+	-webkit-animation-iteration-count: infinite;
+  	animation-iteration-count: infinite;
+}
+
+.item-txt > h2,
+.item-txt > p,
+.item-txt > .rdm .fa {
+	-webkit-transition: color .2s linear .2s;
+	transition: color .2s linear .2s;
+}
+
+.intro1 .item:hover .item-txt > h2,
+.intro1 .item:hover .item-txt > p,
+.intro1 .item:hover .item-txt > .rdm .fa {
+	color: #fff;
+	-webkit-transition: color .2s linear 0s;
+	transition: color .2s linear 0s;
+}
+ 
+.intro2 .items-area .item:hover p,
+.intro2 .items-area .item:hover span {
+	color: #fff !important;
+	-webkit-transition: color .2s linear 0s;
+  	transition: color .2s linear 0s;
+}
+
+.intro2 .items-area .item::before,
+.intro1 .item .item-txt::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 3px;
+    background: #6abe52;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.intro2 .items-area .item:hover::before,
+.intro1 .item:hover .item-txt::before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52,1.64,.37,.66);
+    transition-timing-function: cubic-bezier(0.52,1.64,.37,.66);
+}
+
+.thm-btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.thm-btn:hover::before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.thm-btn.hvr-1::before {background: #118442;}
+.thm-btn.hvr-2::before {background: #6abe52;}
+.thm-btn.hvr-3::before {background: #e2e659;}
