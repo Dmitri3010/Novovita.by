@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Novovita.by.Models;
+using Novovita.by.Services.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +13,19 @@ namespace Novovita.by.Controllers
         public IActionResult Index()
         {
             ViewData["Message"] = "Admin";
+            var categories = Categories.Get();
+
 
             return View();
         }
 
         public IActionResult CategoriesList()
+        {
+            var categories = Categories.Get();
+            return View();
+        }
+
+        public IActionResult CategoriesAddOrUpdate()
         {
             return View();
         }

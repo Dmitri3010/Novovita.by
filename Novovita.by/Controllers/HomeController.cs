@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Novovita.by.Models;
+using Novovita.by.Services.Repository;
 
 namespace Novovita.by.Controllers
 {
@@ -12,6 +13,7 @@ namespace Novovita.by.Controllers
     {
         public IActionResult Index()
         {
+            var categories = Categories.Get(1);
             return View();
         }
 
