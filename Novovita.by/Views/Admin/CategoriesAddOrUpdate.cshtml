@@ -1,0 +1,44 @@
+﻿@model Novovita.by.Models.Category
+
+@{
+    ViewData["Title"] = "CategoriesAddOrUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Добавление и изменение категорий</h2>
+
+<h4>Категория</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CategoriesAddOrUpdate" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" class="form-control" type="hidden" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"> Название</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Картинка</label>
+                <input type="file" name="mainfile">
+                <p class="help-block">Выберите новую картинку или оставьте пустым, если не хотите менять картинку.</p>
+            </div>
+            <input asp-for="Image" class="form-control" type="hidden" />
+
+            <div class="form-group">
+                <label asp-for="Discription" class="control-label">Описание</label>
+                <textarea asp-for="Discription" class="form-control"></textarea>
+                <span asp-validation-for="Discription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-default" asp-action="CategoriesList">Вернуться к списку</a>
+</div>
+
