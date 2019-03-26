@@ -1,0 +1,18 @@
+*.lock
+*.ide-wal
+*.ide-shm
+*.ide
+.vs/
+bin/
+obj/
+packages/
+*.user
+*.csproj
+Novovita.by/wwwroot/images/categories/dab695a7-bf02-4c90-8bca-d15b0aa441c9__117500_gal.jpg
+Novovita.by/wwwroot/images/categories/cca1b3d4-71ed-4d27-81e5-e2497e10c631__5dca548467b176933d327b5056d6020d.jpg
+Novovita.by/wwwroot/images/categories/1930e6d5-e3c8-4bfd-81cd-1e59ea521ee8__justin-bieber-nintendo-store-07_jpg_1308053946.jpg
+Novovita.by/wwwroot/images/categories/0f051053-5006-44ef-807b-f368de0b82ff__117500_gal.jpg
+Novovita.by/wwwroot/images/categories/b49cad94-0d43-4073-b6d7-702fc52aa3cf__4K-Ice-Desktop-Wallpaper.png
+Novovita.by/wwwroot/images/categories/b2881261-69e8-49f3-a837-a3229ae46fda__1.png
+Novovita.by/wwwroot/images/categories/79906952-5f92-4219-b706-e4916b54eaa5__photo_2019-01-23_12-49-08 (2).jpg
+Novovita.by/wwwroot/images/categories/40379d7a-edb0-464d-be3e-200d932b8ba8__photo_2019-01-23_12-49-08.jpg

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Novovita.by.Models.Category>
+@{
+    ViewData["Title"] = "Категории";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var counter = 0;
+}
+<h2>Категории</h2>
+<p>
+    <a asp-action="CategoriesAddOrUpdate">Создать новую категорию</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                №
+            </th>
+            <th>
+                Название
+            </th>
+            <th>
+                Главное изображение
+            </th>
+            <th>
+                Описание
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(++counter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img src="~/images/categories/@item.Image" width="200" />
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Discription)
+                </th>
+              
+                <td>
+                    @Html.ActionLink("Изменить", "CategoriesAddOrUpdate", new { id = item.Id }) |
+                    @Html.ActionLink("Удалить", "CategoriesDelete", new { id = item.Id }, new { onclick = "return confirm('Вы действительно хотите удалить?');" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
