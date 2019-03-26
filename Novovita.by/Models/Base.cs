@@ -7,6 +7,6 @@ namespace Novovita.by.Models
 {
     public class Base
     {
-        public int id { get; set; }
+        public int Id { get; set; }
     }
 }
