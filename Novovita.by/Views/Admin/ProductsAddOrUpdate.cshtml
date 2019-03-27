@@ -1,0 +1,83 @@
+﻿@model Novovita.by.Models.Product
+@{
+    Layout = "_AdminLayout";
+    var categories = ViewData["Category"] as List<Category>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProductsAddOrUpdate</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="ProductsAddOrUpdate" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="Id" class="form-control" type="hidden" />
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"> Название </label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"> Категория</label>
+                    <select asp-for="CategoryId"
+                            asp-items="@(new SelectList(categories, nameof(Category.Id), nameof(Category.Name)))"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Cost" class="control-label"> Цена</label>
+                    <input asp-for="Cost" asp-is-invariant="true" class="form-control" />
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Count" class="control-label">Количество</label>
+                    <input asp-for="Count" asp-is-invariant="true" class="form-control" />
+                    <span asp-validation-for="Count" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="IsInStock" /> есть ли в наличии
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Discription" class="control-label">Описание</label>
+                    <textarea asp-for="Discription" class="form-control"></textarea>
+                    <span asp-validation-for="Discription" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Главная картинка</label>
+                    <input type="file" name="mainfile" id="inputFile" onchange="readMainImage(inputFile); ">
+                    <img id="image_upload_preview" width="200" />
+                    <p class="help-block">Выберите новую картинку или оставьте пустым, если не хотите менять картинку.</p>
+                </div>
+                <input asp-for="MainImage" class="form-control" type="hidden" />
+
+                <div class="field" align="left">
+                    <h3>Дополнительные картинки</h3>
+                    <input type="file" id="files" name="files" multiple />
+                </div>
+                <input asp-for="ImagesObj" class="form-control" type="hidden" />
+                <br><br>
+
+                <div class="form-group">
+                    <input type="submit" value="Сохранить" class="btn btn-default" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-default" asp-action="ProductsList">Вернуться к списку</a>
+    </div>
+</body>
+</html>
