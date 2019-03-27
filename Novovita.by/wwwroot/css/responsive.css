@@ -1,6 +1,6 @@
-@media(max-width: 1199px) {
+	@media(max-width: 1199px) {
   .hotline {
-    background: url(../img/bg/05.png) no-repeat center center;
+    background: url(../img/bg.svg) no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
     -webkit-box-shadow: none;
@@ -574,7 +574,7 @@
   }
 
   .brandItem {
-    height: 80px;
+    height: 100px;
     line-height: 80px;
   }
 
@@ -1105,7 +1105,7 @@
   }
 
   .slider-icon {
-    width: 60px;
+    width: 160px;
     height: 59px;
   }
 
