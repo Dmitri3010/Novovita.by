@@ -23,6 +23,50 @@
       <![endif]-->
 </head>
 <body>
+    <header class="header1">
+        <nav class="navbar nav-solid mb-0">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <span></span>  <span></span>  <span></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../images/logo.jpg" alt="logo">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="nav navbar-nav f1 mainMenu text-capitalize navbar-left">
+
+                        <li class="active">
+                            <a asp-action="Index">Главная</a>
+
+                        </li>
+                        <li>
+                            <a asp-action="About">Партнерам</a>
+                        </li>
+                        <li>
+                            <a asp-action="About">О компании</a>
+                        </li>
+
+                        <li>
+                            <a asp-controller="Home" asp-action="News">Блог</a>
+
+                        </li>
+                        <li>
+                            <a asp-action="Contacts">Контакт</a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav f1 mainMenu text-capitalize navbar-right">
+                        <li style=""><a href="#" style="padding: 10px 15px !important;background: #83bb25 !important;display: inline-block;margin-top: -10px;color: white;border-radius: 5px;">Написать нам</a></li>
+                        <li style="margin-top:-15px"><a href="tel:+375333230407" style="margin-bottom: 7px;">+375333230407</a><a href="tel:+375295425688">+375 295425688</a></li>
+                        <li class="hidden-md" style="margin-top:-15px"><a style="margin-bottom: 7px;">market@novovita.by</a><a>export@novovita.by</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     @RenderBody()
     <script src="~/js/jquery-1.12.4.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>

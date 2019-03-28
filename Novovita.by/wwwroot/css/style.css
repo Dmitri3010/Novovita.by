@@ -101,6 +101,12 @@
 	background-image: none;
 	border-color: #5f881b;
 }
+.bg4 {
+	color: #83bb25 !important;
+	background-color: #fff !important;
+	background-image: none;
+	border-color: #fff;
+}
 
 /* theme fonts */
 
@@ -149,13 +155,13 @@
 }
 
 .op-header {
-    background: url(../images/bg/12.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-top: 104px;
-    padding-bottom: 137px;
-    position: relative;
-    z-index: 2;
+	background: url(../images/bg_blog.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-top: 104px;
+	padding-bottom: 137px;
+	position: relative;
+	z-index: 2;
 }
 
 /* section-header end */
@@ -413,18 +419,18 @@
 }
 
 .social-nav a {
-    width: 44px;
-    height: 44px;
-    display: block;
-    text-align: center;
-    background: url(../images/icon-holder/01.png) no-repeat center center !important;
-    -webkit-background-size: cover;
-    background-size: cover;
+	width: 44px;
+	height: 44px;
+	display: block;
+	text-align: center;
+	background: url(../images/icon-holder/01.png) no-repeat center center !important;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
-    .social-nav a:hover {
-        background: url(../images/icon-holder/03.png) no-repeat center center !important;
-    }
+.social-nav a:hover {
+	background: url(../images/icon-holder/03.png) no-repeat center center !important;
+}
 
 .social-nav a .fa {
 	font-size: 16px;
@@ -628,7 +634,7 @@
 
 .main-slider.ms1 .banner-carousel {
 	height: 796px;
-	background: url(../images/1.jpg) no-repeat center center;
+	background: url(../images/bg.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -643,19 +649,19 @@
 }
 
 [data-item="1"] {
-    background: url(../images/bg/01.png) no-repeat bottom center;
+	background: url(../images/bg/01.png) no-repeat bottom center;
 }
 
 [data-item="2"] {
-    background: url(../images/bg/02.png) no-repeat bottom center;
+	background: url(../images/bg/02.png) no-repeat bottom center;
 }
 
 [data-item="3"] {
-    background: url(../images/bg/03.png) no-repeat bottom center;
+	background: url(../images/bg/03.png) no-repeat bottom center;
 }
 
 [data-item="4"] {
-    background: url(../images/bg/04.png) no-repeat bottom center;
+	background: url(../images/bg/04.png) no-repeat bottom center;
 }
 
 .banner-carousel .owl-dots {
@@ -710,7 +716,7 @@
 	width: 250px;
 	height: 89px;
 	text-align: center;
-	/* background: url(images/icon-holder/02.png) no-repeat center center; */
+	/* background: url(../images/icon-holder/02.png) no-repeat center center; */
 	-webkit-background-size: cover;
 	background-size: cover;
 	display: block;
@@ -754,6 +760,16 @@
 /************************************/
 
 /* intro1 */
+
+.feedback_form{
+	background: #83bb25;
+	padding: 80px 0;
+	
+}
+.feedback_form .section-header a{
+	font-size: 24px; 
+	padding: 0 10px;
+}
 
 .intro1 {
 	padding-top: 122px;
@@ -864,25 +880,26 @@
 }
 
 .item-txt > .rdm {
-    display: block;
-    text-align: center;
-    width: 44px;
-    height: 44px;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-transform: translateY(70%);
-    -ms-transform: translateY(70%);
-    -o-transform: translateY(70%);
-    transform: translateY(70%);
-    background: url(../images/icon-holder/01.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
+	display: block;
+	text-align: center;
+	width: 44px;
+	height: 44px;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-transform: translateY(70%);
+	-ms-transform: translateY(70%);
+	-o-transform: translateY(70%);
+	transform: translateY(70%);
+	background: url(../images/icon-holder/01.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
 }
 
 .intro1 .item:hover .item-txt > .rdm {
-    background: url(../images/icon-holder/03.png) no-repeat center center;
+	background: url(../images/icon-holder/03.png) no-repeat center center;
 }
 
 .intro1 .item:hover .item-txt > .rdm .fa {
@@ -947,19 +964,20 @@
 	transform: translateY(5px);
 }
 
-    .intro-left > a:not(.thm-btn) i {
-        font-weight: 400;
-        font-size: 16px;
-        color: #118442;
-        width: 71px;
-        height: 70px;
-        line-height: 70px;
-        text-align: center;
-        display: inline-block;
-        background: url(../images/icon-holder/08.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
+.intro-left > a:not(.thm-btn) i {
+	font-weight: 400;
+	font-size: 16px;
+	color: #118442;
+	width: 71px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	display: inline-block;
+
+	background: url(../images/icon-holder/08.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
 .intro-card {
 	position: absolute;
@@ -983,12 +1001,12 @@
 }
 
 .intro2 .items-area {
-    background: url(../images/bg/09.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-bottom: 140px;
-    padding-top: 122px;
-    margin-top: 120px;
+	background: url(../images/bg/09.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-bottom: 140px;
+	padding-top: 122px;
+	margin-top: 120px;
 }
 
 .intro2 .items-area .item {
@@ -1019,30 +1037,31 @@
 	color: #6abe52;
 }
 
-    .intro2 .items-area .item .rdm {
-        display: block;
-        text-align: center;
-        width: 44px;
-        height: 44px;
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        -webkit-transform: translate(-50%, 50%);
-        -ms-transform: translate(-50%, 50%);
-        -o-transform: translate(-50%, 50%);
-        transform: translate(-50%, 50%);
-        background: url(../images/icon-holder/01.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-        -webkit-transition: all .2s ease;
-        transition: all .2s ease;
-    }
+.intro2 .items-area .item .rdm {
+	display: block;
+	text-align: center;
+	width: 44px;
+	height: 44px;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, 50%);
+	-ms-transform: translate(-50%, 50%);
+	-o-transform: translate(-50%, 50%);
+	transform: translate(-50%, 50%);
+	background: url(../images/icon-holder/01.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
 
-    .intro2 .items-area .item:hover .rdm {
-        background: url(../images/icon-holder/03.png) no-repeat center center;
-    }
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.intro2 .items-area .item:hover .rdm {
+	background: url(../images/icon-holder/03.png) no-repeat center center;
+}
 
 .intro2 .items-area .item:hover .rdm .fa {
 	color: #fff;
@@ -1103,15 +1122,15 @@
 	display: block;
 }
 
-    .hotline .contac-row .icon-box > span {
-        width: 92px;
-        height: 89px;
-        display: block;
-        text-align: center;
-        background: url(../images/icon-holder/05.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
+.hotline .contac-row .icon-box > span {
+	width: 92px;
+	height: 89px;
+	display: block;
+	text-align: center;
+	background: url(../images/icon-holder/05.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
 .hotline .contac-row .icon-box > span i {
 	font-size: 40px;
@@ -1236,12 +1255,13 @@
 /************************************/
 
 .facts-area {
-    background: url(../images/bg/06.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-top: 122px;
-    padding-bottom: 138px;
-    margin-top: 12px;
+	/*background: url(../images/bg/06.png) no-repeat center center;*/
+	-webkit-background-size: cover;
+	    background: #bdbdbd;
+	background-size: cover;
+	padding-top: 122px;
+	padding-bottom: 138px;
+	margin-top: 12px;
 }
 
 .about-page .facts-area {
@@ -1251,7 +1271,7 @@
 .single-fact > span {
 	width: 126px;
 	height: 123px;
-	display: block; 
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 38px;
@@ -1267,8 +1287,8 @@
 }
 
 .fact-container:hover .single-fact > span {
-    color: #111c16;
-    background: url(../images/icon-holder/05.png) no-repeat center center;
+	color: #111c16;
+	background: url(../images/icon-holder/05.png) no-repeat center center;
 }
 
 .fact-title {
@@ -1321,24 +1341,24 @@
 }
 
 .donate {
-    width: 126px;
-    height: 123px;
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    line-height: 20px;
-    padding-top: 35px;
-    background: url(../images/icon-holder/06.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+	width: 126px;
+	height: 123px;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	line-height: 20px;
+	padding-top: 35px;
+	background: url(../images/icon-holder/06.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .project-single .img-box .donate {
@@ -1443,14 +1463,14 @@
 
 .item-content > .rdm,
 .project-single > .rdm {
-    display: block;
-    text-align: center;
-    width: 44px;
-    height: 44px;
-    margin-top: 51px;
-    background: url(../images/icon-holder/01.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
+	display: block;
+	text-align: center;
+	width: 44px;
+	height: 44px;
+	margin-top: 51px;
+	background: url(../images/icon-holder/01.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 .project-single > .rdm {
@@ -1465,7 +1485,7 @@
 }
 
 .project-single:hover > .rdm {
-    background: url(../images/icon-holder/03.png) no-repeat center center;
+	background: url(../images/icon-holder/03.png) no-repeat center center;
 }
 
 .project-single:hover > .rdm i {
@@ -1576,18 +1596,18 @@
 }
 
 .project-sidebar ul a {
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    display: block;
-    background: url(../images/icon-holder/01.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	display: block;
+	background: url(../images/icon-holder/01.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
-    .project-sidebar ul a:hover {
-        background: url(../images/icon-holder/03.png) no-repeat center center !important;
-    }
+.project-sidebar ul a:hover {
+	background: url(../images/icon-holder/03.png) no-repeat center center !important;
+}
 
 .project-sidebar ul a:hover .fa {
 	color: #fff !important
@@ -1618,10 +1638,10 @@
 /************************************/
 
 .testimony {
-    background: url(../images/bg/07.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-bottom: 113px;
+	background: url(../images/bg/07.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-bottom: 113px;
 }
 
 .name {
@@ -1860,18 +1880,18 @@
 	padding-bottom: 120px;
 }
 
-    .team::before {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: calc(100% + 20px);
-        background: url(../images/bg/13.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-    }
+.team::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: calc(100% + 20px);
+	background: url(../images/bg/13.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
 
 .about-page .team::before {
 	display: none;
@@ -1909,20 +1929,20 @@
 	transform: translateY(calc(-100% - 10px));
 }
 
-    .member-info ul a {
-        width: 44px;
-        height: 44px;
-        display: block;
-        text-align: center;
-        line-height: 44px;
-        background: url(../images/icon-holder/09.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
+.member-info ul a {
+	width: 44px;
+	height: 44px;
+	display: block;
+	text-align: center;
+	line-height: 44px;
+	background: url(../images/icon-holder/09.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
-        .member-info ul a:hover {
-            background: url(../images/icon-holder/03.png) no-repeat center center !important;
-        }
+.member-info ul a:hover {
+	background: url(../images/icon-holder/03.png) no-repeat center center !important;
+}
 
 .member-info ul a:hover .fa {
 	color: #fff !important
@@ -1981,12 +2001,12 @@
 /************************************/
 
 .process {
-    background: url(../images/bg/11.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    position: relative;
+	background: url(../images/bg/11.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	position: relative;
 }
 
 .process-img {
@@ -2048,19 +2068,20 @@
 	float: left;
 }
 
-    .process-txt li i {
-        background: url(../images/icon-holder/03.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 44px;
-        height: 44px;
-        margin-right: 20px;
-        text-align: center;
-        float: left;
-        display: block;
-        line-height: 44px;
-        color: #fff;
-    }
+.process-txt li i {
+	background: url(../images/icon-holder/03.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 44px;
+	height: 44px;
+	margin-right: 20px;
+	text-align: center;
+	float: left;
+	display: block;
+	line-height: 44px;
+	color: #fff;
+}
 
 /************************************/
 
@@ -2135,23 +2156,23 @@
 	z-index: 3;
 }
 
-    .gallery-single a span i {
-        width: 82px;
-        height: 81px;
-        display: block;
-        border-radius: 100%;
-        background: url(../images/icon-holder/12.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-        color: #fff;
-        text-align: center;
-        line-height: 80px;
-        font-size: 30px;
-        visibility: hidden;
-        opacity: 0;
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition: all .3s ease-in-out 0s;
-    }
+.gallery-single a span i {
+	width: 82px;
+	height: 81px;
+	display: block;
+	border-radius: 100%;
+	background: url(../images/icon-holder/12.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	line-height: 80px;
+	font-size: 30px;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+}
 
 .gallery-single:hover a::before {
 	-webkit-animation-duration: 0.75s;
@@ -2176,7 +2197,7 @@
 }
 
 .volunteer-banner {
-	background: url(../images/volunteer/04.jpg) no-repeat center center;
+	/*background: url(../images/volunteer/04.jpg) no-repeat center center;*/
 	-webkit-background-size: cover;
 	background-size: cover;
 	border-radius: 3px;
@@ -2184,6 +2205,7 @@
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-bottom: 30px;
+	background: #83bb25;
 }
 
 .volunteer-tab .section-header {
@@ -2201,29 +2223,30 @@
 	padding-bottom: 115px;
 }
 
-    .volunteer-tab .tab-list a i {
-        font-size: 50px;
-        width: 110px;
-        height: 105px;
-        line-height: 105px;
-        font-size: 50px;
-        display: block;
-        background: url(../images/icon-holder/10.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-        text-align: center;
-        -webkit-transition: all .3s ease;
-        transition: all .3s ease;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-        -webkit-transform-origin: center center;
-        -moz-transform-origin: center center;
-        -ms-transform-origin: center center;
-        -o-transform-origin: center center;
-        transform-origin: center center;
-    }
+.volunteer-tab .tab-list a i {
+	font-size: 50px;
+	width: 110px;
+	height: 105px;
+	line-height: 105px;
+	font-size: 50px;
+	display: block;
+	background: url(../images/icon-holder/10.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-ms-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+}
 
 .volunteer-tab .tab-list li:not(:last-of-type),
 .volunteer-tab .tab-list li:not(.active) {
@@ -2235,16 +2258,16 @@
 	margin-left: 44px;
 }
 
-    .volunteer-tab .tab-list .active a i {
-        -webkit-transform: scale(2);
-        -ms-transform: scale(2);
-        -o-transform: scale(2);
-        transform: scale(2);
-        background: url(../images/icon-holder/11.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-        color: #fff !important;
-    }
+.volunteer-tab .tab-list .active a i {
+	-webkit-transform: scale(2);
+	-ms-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
+	background: url(../images/icon-holder/11.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #fff !important;
+}
 
 .volunteer-tab .tab-content {
 	margin-top: 113px;
@@ -2399,19 +2422,19 @@
 	text-align: right;
 }
 
-    .share-news a {
-        width: 44px;
-        height: 44px;
-        text-align: center;
-        display: block;
-        background: url(../images/icon-holder/01.png) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
+.share-news a {
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	display: block;
+	background: url(../images/icon-holder/01.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
-        .share-news a:hover {
-            background: url(../images/icon-holder/03.png) no-repeat center center;
-        }
+.share-news a:hover {
+	background: url(../images/icon-holder/03.png) no-repeat center center;
+}
 
 .share-news li:not(:last-of-type) {
 	margin-right: 5px;
@@ -2723,19 +2746,20 @@ footer {
 }
 
 .footer-contact li a {
-    width: 44px;
-    height: 44px;
-    display: block;
-    text-align: center;
-    line-height: 48px;
-    background: url(../images/icon-holder/07.png) no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
+	width: 44px;
+	height: 44px;
+	display: block;
+	text-align: center;
+	line-height: 48px;
+	background: url(../images/icon-holder/07.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	    
 }
 
-    .footer-contact li a:hover {
-        background: url(../images/icon-holder/03.png) no-repeat center center !important;
-    }
+.footer-contact li a:hover {
+	background: url(../images/icon-holder/03.png) no-repeat center center !important;
+}
 
 .footer-contact li a:hover .fa {
 	color: #fff !important
@@ -2765,7 +2789,7 @@ footer {
 }
 
 .fooler-col {
-	width: 33.33%;
+	width: 50%;
 	float: left;
 }
 
