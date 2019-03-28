@@ -12,6 +12,8 @@ namespace Novovita.by.Models
 
         public double Cost { get; set; }
 
+        public double Count { get; set; }
+
         public bool IsInStock { get; set; }
 
         public string MainImage { get; set; }

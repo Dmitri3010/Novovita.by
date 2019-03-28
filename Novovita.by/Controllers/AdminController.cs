@@ -88,7 +88,7 @@ namespace Novovita.by.Controllers
         public IActionResult ProductsAddOrUpdate(int id = -1)
         {
           
-            ViewData["Categories"] = Categories.Get();
+            ViewData["Category"] = Categories.Get();
             ViewData[nameof(Products)] = Products.Get();
             return View(Products.Get(id));
         }

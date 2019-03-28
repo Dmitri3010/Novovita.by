@@ -9,7 +9,9 @@ namespace Novovita.by.Controllers
     {
         public IActionResult Index()
         {
-            var categories = Categories.Get(1);
+            var categories = Categories.Get();
+            var products = Products.Get();
+            ViewData["Products"] = products;
             return View();
         }
 
@@ -20,14 +22,19 @@ namespace Novovita.by.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Contacts()
         {
             ViewData["Message"] = "Your contact page.";
 
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult News()
+        {
+            return View();
+        }
+
+        public IActionResult SingleNews()
         {
             return View();
         }
