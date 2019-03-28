@@ -44,7 +44,7 @@
                 </th>
               
                 <td>
-                    @Html.ActionLink("Изменить", "CategoriesAddOrUpdate", new { id = item.Id }) |
+                  @*  @Html.ActionLink("Изменить", "CategoriesAddOrUpdate", new { id = item.Id }) |*@
                     @Html.ActionLink("Удалить", "CategoriesDelete", new { id = item.Id }, new { onclick = "return confirm('Вы действительно хотите удалить?');" })
                 </td>
             </tr>

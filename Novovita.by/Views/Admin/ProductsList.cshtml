@@ -44,7 +44,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                <img src="~/images/categories/@item.MainImage" width="200" />
+                <img src="~/images/products/@item.MainImage" width="200" />
             </td>
             <th>
                 @Html.DisplayFor(modelItem => item.Discription)
@@ -57,7 +57,7 @@
             </th>
 
             <td>
-                @Html.ActionLink("Изменить", "ProductsAddOrUpdate", new { id = item.Id }) |
+              @*  @Html.ActionLink("Изменить", "ProductsAddOrUpdate", new { id = item.Id }) |*@
                 @Html.ActionLink("Удалить", "ProductsDelete", new { id = item.Id }, new { onclick = "return confirm('Вы действительно хотите удалить?');" })
             </td>
         </tr>

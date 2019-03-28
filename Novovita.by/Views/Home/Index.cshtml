@@ -1,65 +1,14 @@
-﻿
+﻿@{ 
+    var products = ViewData["Products"] as List<Product>;
+}
 <body>
     <div class="preloader">
         <div class="spinner"></div>
     </div>
     <!-- page-wrapper start -->
+    <a href="~/Views/Home/Index.cshtml">~/Views/Home/Index.cshtml</a>
     <div class="page-wrapper">
         <!-- header start -->
-        <header class="header1">
-            <nav class="navbar nav-solid mb-0">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-                            <span></span>  <span></span>  <span></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="images/logo.jpg" alt="logo">
-                        </a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="main-menu">
-                        <ul class="nav navbar-nav f1 mainMenu text-capitalize navbar-left">
-
-                            <li class="active">
-                                <a href="index.html">Главная</a>
-                                <ul class="sub-menu">
-                                    <li class="active">
-                                        <a href="index.html">home 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">home 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="about.html">О компании</a>
-                            </li>
-                            <li>
-                                <a href="gallery.html">Партнерам</a>
-                            </li>
-                            <li>
-                                <a href="news.html">Блог</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="single-news.html">single news</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="contact.html">Контакт</a>
-                            </li>
-
-                        </ul>
-                        <ul class="nav navbar-nav f1 mainMenu text-capitalize navbar-right">
-                            <li style=""><a href="#" style="padding: 10px 15px !important;background: #83bb25 !important;display: inline-block;margin-top: -10px;color: white;border-radius: 5px;">Написать нам</a></li>
-                            <li style="margin-top:-15px"><a href="tel:+375333230407" style="margin-bottom: 7px;">+375333230407</a><a href="tel:+375295425688">+375 295425688</a></li>
-                            <li class="hidden-md" style="margin-top:-15px"><a style="margin-bottom: 7px;">market@novovita.by</a><a>export@novovita.by</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
         <!-- header end -->
         <!-- main-slider start -->
         <div class="main-slider ms1">
@@ -199,30 +148,19 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="gallery-carousel owl-carousel">
+                            @foreach (var prod in products)
+                            {
                             <div class="gallery-single">
                                 <a href="index.html">
-                                    <img src="images/volunteer/05.jpg" alt="">
-                                    <h3>Морковка вкусная</h3>
-                                    <p class="price">Цена: <strong>10p</strong></p>
+                                    <img src="images/products/@prod.MainImage" alt="">
+                                    <h3>@prod.Name</h3>
+                                    <p class="price">Цена: <strong>@prod.Cost p</strong></p>
                                     <p class="c1 availability">в наличии</p>
                                 </a>
                             </div>
-                            <div class="gallery-single">
-                                <a href="index.html">
-                                    <img src="images/volunteer/05.jpg" alt="">
-                                    <h3>Морковка вкусная</h3>
-                                    <p class="price">Цена: <strong>10p</strong></p>
-                                    <p class="c1 availability">в наличии</p>
-                                </a>
-                            </div>
-                            <div class="gallery-single">
-                                <a href="index.html">
-                                    <img src="images/volunteer/05.jpg" alt="">
-                                    <h3>Морковка вкусная</h3>
-                                    <p class="price">Цена: <strong>10p</strong></p>
-                                    <p class="c1 availability">в наличии</p>
-                                </a>
-                            </div>
+                            }
+
+
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -603,7 +541,7 @@
                 </div>
             </div>
             <div class="footer-bottom f1">
-                <div class="container"> 
+                <div class="container">
                     <p>NovoVita © 2018 | Все права защищены</p>
                 </div>
             </div>
