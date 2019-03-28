@@ -4,12 +4,9 @@
     ViewData["Title"] = "NewsAddOrUpdate";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<script>
-    $('#sandbox-container .input-group.date').datepicker({
-        format: "mm/dd",
-        todayBtn: true,
-        language: "ru",
-        todayHighlight: true
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
     });
 </script>
 
@@ -39,11 +36,10 @@
                 <textarea asp-for="Discription" class="form-control"></textarea>
                 <span asp-validation-for="Discription" class="text-danger"></span>
             </div>
-            <div class="input-group date"  data-provide="datepicker">
-                <input type="text"asp-for="Date" class="form-control">
-                <div class="input-group-addon">
-                    <span asp-validation-for="Date" class="glyphicon glyphicon-th"></span>
-                </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label">Дата</label>
+
+                <input asp-for="Date" type='text' class="datepicker-here" data-position="right top" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Сохранить" class="btn btn-default" />
