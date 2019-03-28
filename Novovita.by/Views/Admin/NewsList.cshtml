@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Novovita.by.Models.News>
+@{
+    ViewData["Title"] = "Новости";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var counter = 0;
+}
+<h2>Новости</h2>
+<p>
+    <a asp-action="NewsAddOrUpdate">Создать новую новость</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                №
+            </th>
+            <th>
+                Заголовок
+            </th>
+            <th>
+                Изображение
+            </th>
+            <th>
+                Описание
+            </th>
+            <th>
+                Дата
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @(++counter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <img src="~/images/news/@item.Image" width="200" />
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Discription)
+            </th>
+
+            <th>
+                @Html.DisplayFor(modelItem => item.Date)
+            </th>
+
+            <td>
+                @Html.ActionLink("Удалить", "NewsDelete", new { id = item.Id }, new { onclick = "return confirm('Вы действительно хотите удалить?');" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

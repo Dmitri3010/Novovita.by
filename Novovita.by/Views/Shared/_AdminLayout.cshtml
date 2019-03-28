@@ -42,7 +42,7 @@
                     <li>
                         <a asp-controller="Admin" asp-action="CategoriesList">Категории</a>
                     </li>
-                   
+
                     @* <li> *@
                     @*     $1$ TODO: Maybe need to delete this? #1# *@
                     @*     <a asp-controller="Admin" asp-action="TemplateList">Макеты</a> *@
@@ -55,7 +55,7 @@
                     </li>
 
                     <li>
-                        <a asp-controller="Admin" asp-action="SliderList">Слайдер</a>
+                        <a asp-controller="Admin" asp-action="NewsList">Новости</a>
                     </li>
                     <li>
                         <a asp-controller="Account" asp-action="Logout">Выйти</a>
@@ -102,6 +102,18 @@
                 asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
         </script>
     </environment>
+    <script src="~/js/jquery-1.12.4.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+    <script src="~/js/html5lightbox/html5lightbox.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.js"></script>
+    <script src="~/js/numscroller-1.0.js"></script>
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <script src="~/js/jquery.enllax.min.js"></script>
+    <script src="~/js/isotope.js"></script>
+    <script src="~/js/magnific-popup.js"></script>
+    <script src="~/js/main.js"></script>
+
 
     @RenderSection("Scripts", false)
 </body>
