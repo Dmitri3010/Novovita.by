@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Novovita.by.Models;
-using System.Collections.Generic;
 
 namespace Novovita.by.Context
 {

@@ -113,6 +113,35 @@ namespace Novovita.by.Controllers
             return RedirectToAction(nameof(ProductsList));
         }
 
+        [HttpGet]
+        public IActionResult NewsList()
+        {
+            var news = NewsRepository.Get();
+            return View(news);
+        }
+
+        [HttpGet]
+        public IActionResult NewsAddOrUpdate(int id = -1)
+        {
+
+            ViewData[nameof(News)] = NewsRepository.Get();
+            return View(NewsRepository.Get(id));
+        }
+
+        [HttpPost]
+        public IActionResult NewsAddOrUpdate(News news, IFormFile mainfile)
+        {
+
+            news.Image = SaveFile(mainfile, "news") ?? news.Image;           
+
+            NewsRepository.AddOrUpdate(news);
+
+            return RedirectToAction(nameof(NewsList));
+        }
+
+
+
+
 
     }
 }

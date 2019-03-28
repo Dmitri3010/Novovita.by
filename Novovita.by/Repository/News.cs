@@ -11,6 +11,29 @@ namespace Novovita.by.Repository
     {
         static EfContext db = new EfContext();
 
-        public static List<News> Get => db.News.ToList();
+        public static List<News> Get()
+        {
+            return db.News.ToList();
+        }
+
+        public static News Get(int id)
+        {
+            return db.News.FirstOrDefault(p => p.Id == id);
+        }
+
+        public static News AddOrUpdate(News news)
+        {
+            var set = db.News.Add(news).Entity;
+            db.SaveChanges();
+            return set;
+        }
+        public static News Delete(News news)
+        {
+            var set = db.News.Remove(news).Entity;
+
+            db.SaveChanges();
+
+            return set;
+        }
     }
 }
