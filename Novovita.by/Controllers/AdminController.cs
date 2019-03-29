@@ -140,6 +140,14 @@ namespace Novovita.by.Controllers
         }
 
 
+        [HttpGet]
+        public IActionResult NewsDelete(int id = -1)
+        {
+            var news = NewsRepository.Get(id);
+            NewsRepository.Delete(news);
+            
+            return RedirectToAction(nameof(NewsList));
+        }
 
 
 

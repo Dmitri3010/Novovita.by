@@ -11,7 +11,9 @@ namespace Novovita.by.Controllers
         {
             var categories = Categories.Get();
             var products = Products.Get();
+            var news = NewsRepository.Get();
             ViewData["Products"] = products;
+            ViewData["News"] = news ;
             return View();
         }
 
@@ -31,10 +33,24 @@ namespace Novovita.by.Controllers
 
         public IActionResult News()
         {
+            var news = NewsRepository.Get();
+
+            return View(news);
+        }
+
+        public IActionResult Product()
+        {
+            var products = Products.Get();
+            return View(products);
+
+        }
+
+        public IActionResult SingleNews(int id)
+        {
             return View();
         }
 
-        public IActionResult SingleNews()
+        public IActionResult SingleProduct(int id)
         {
             return View();
         }
