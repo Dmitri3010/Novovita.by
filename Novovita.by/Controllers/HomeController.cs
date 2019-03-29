@@ -9,7 +9,11 @@ namespace Novovita.by.Controllers
     {
         public IActionResult Index()
         {
-            var categories = Categories.Get(1);
+            var categories = Categories.Get();
+            var products = Products.Get();
+            var news = NewsRepository.Get();
+            ViewData["Products"] = products;
+            ViewData["News"] = news ;
             return View();
         }
 
@@ -20,14 +24,33 @@ namespace Novovita.by.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Contacts()
         {
             ViewData["Message"] = "Your contact page.";
 
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult News()
+        {
+            var news = NewsRepository.Get();
+
+            return View(news);
+        }
+
+        public IActionResult Product()
+        {
+            var products = Products.Get();
+            return View(products);
+
+        }
+
+        public IActionResult SingleNews(int id)
+        {
+            return View();
+        }
+
+        public IActionResult SingleProduct(int id)
         {
             return View();
         }

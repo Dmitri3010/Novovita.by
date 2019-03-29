@@ -23,7 +23,7 @@ function owlCarouselActivation() {
     if ($(".brand-carousel").length) {
         $(".brand-carousel").owlCarousel({
             autoplay: true,
-            autoplayTimeout: 8000,
+            autoplayTimeout: 2000,
             loop: true,
             pagination: false,
             mouseDrag: true,
@@ -84,7 +84,7 @@ function owlCarouselActivation() {
             smartSpeed: 500,
             nav: true,
             dotsEach: false,
-            items: 3,
+            items: 2,
             responsive: {
                 0 : {
                     margin: 15,
@@ -148,20 +148,41 @@ function owlCarouselActivation() {
     if ($(".gallery-carousel").length) {
         $(".gallery-carousel").owlCarousel({
             autoplay: true,
-            autoplayTimeout: 8000,
+            autoplayTimeout: 4000,
             loop: true,
             pagination: true,
             touchDrag: true,
             margin: 30,
             stagePadding: 46,
             smartSpeed: 500,
-            nav: false,
+            nav: true,
             dotsEach: false,
             rtl: true,
             items: 1,
             responsive: {
-                420 : {
+                0 : {
+                    margin: 15,
+                    autoWidth:false,
+                    center: true,
+                    nav: true,
+                    navElement: "span",
+                    navText: ["<span class='fa fa-angle-left'></span>","<span class='fa fa-angle-right'></span>"],
                     items: 1
+                },
+                372 : {
+                    margin: 30,
+                    autoWidth:true,
+                    center: false,
+                    nav: true,
+                    navElement: "span",
+                    navText: ["<span class='fa fa-angle-left'></span>","<span class='fa fa-angle-right'></span>"],
+                    items: 1
+                },
+				420 : {
+                    items: 1,nav: true,
+                    navElement: "span",
+                    navText: ["<span class='fa fa-angle-left'></span>","<span class='fa fa-angle-right'></span>"],
+					
                 },
                 421 : {
                     items: 2
@@ -346,3 +367,12 @@ jQuery(window).on('load', function() {
 });
 
 $(window).enllax();
+
+$(window).scroll(function(e){
+  parallax();
+});
+
+function parallax(){
+  var scrolled = $(window).scrollTop();
+  $('.background').css('background-position-y',-(scrolled*0.15)+'px');
+}

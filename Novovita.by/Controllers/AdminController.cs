@@ -4,7 +4,9 @@ using Novovita.by.Models;
 using Novovita.by.Repository;
 using Novovita.by.Services;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Novovita.by.Controllers
 {
@@ -75,6 +77,78 @@ namespace Novovita.by.Controllers
                 return null;
             }
         }
+
+        public IActionResult ProductsList()
+        {
+            var products = Products.Get();
+            return View(products);
+        }
+
+        [HttpGet]
+        public IActionResult ProductsAddOrUpdate(int id = -1)
+        {
+          
+            ViewData["Category"] = Categories.Get();
+            ViewData[nameof(Products)] = Products.Get();
+            return View(Products.Get(id));
+        }
+
+        [HttpPost]
+        public IActionResult ProductsAddOrUpdate(Product product, IFormFile[] files, IFormFile mainfile)
+        {
+          
+            product.MainImage = SaveFile(mainfile, "products") ?? product.MainImage;
+
+            if (files.Any())
+            {
+                product.ImagesObj = new List<string>();
+                files.ToList().ForEach(f => product.ImagesObj.Add(SaveFile(f, "products")));
+                product.ImagesObj = product.ImagesObj.Where(i => i != null).ToList();
+            }
+
+            Products.AddOrUpdate(product);
+
+            ViewData["Categories"] = Categories.Get();
+
+            return RedirectToAction(nameof(ProductsList));
+        }
+
+        [HttpGet]
+        public IActionResult NewsList()
+        {
+            var news = NewsRepository.Get();
+            return View(news);
+        }
+
+        [HttpGet]
+        public IActionResult NewsAddOrUpdate(int id = -1)
+        {
+
+            ViewData[nameof(News)] = NewsRepository.Get();
+            return View(NewsRepository.Get(id));
+        }
+
+        [HttpPost]
+        public IActionResult NewsAddOrUpdate(News news, IFormFile mainfile)
+        {
+
+            news.Image = SaveFile(mainfile, "news") ?? news.Image;           
+
+            NewsRepository.AddOrUpdate(news);
+
+            return RedirectToAction(nameof(NewsList));
+        }
+
+
+        [HttpGet]
+        public IActionResult NewsDelete(int id = -1)
+        {
+            var news = NewsRepository.Get(id);
+            NewsRepository.Delete(news);
+            
+            return RedirectToAction(nameof(NewsList));
+        }
+
 
 
     }

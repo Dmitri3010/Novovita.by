@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Novovita.by.Models.Product>
+@{
+    ViewData["Title"] = "Товары";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var counter = 0;
+}
+<h2>Товары</h2>
+<p>
+    <a asp-action="ProductsAddOrUpdate">Создать новый товар</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                №
+            </th>
+            <th>
+                Название
+            </th>
+            <th>
+                Главное изображение
+            </th>
+            <th>
+                Описание
+            </th>
+            <th>
+                Цена
+            </th>
+            <th>
+                Есть ли в наличии
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @(++counter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <img src="~/images/products/@item.MainImage" width="200" />
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Discription)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.IsInStock)
+            </th>
+
+            <td>
+              @*  @Html.ActionLink("Изменить", "ProductsAddOrUpdate", new { id = item.Id }) |*@
+                @Html.ActionLink("Удалить", "ProductsDelete", new { id = item.Id }, new { onclick = "return confirm('Вы действительно хотите удалить?');" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

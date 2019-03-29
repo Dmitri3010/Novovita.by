@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Novovita.by.Models;
-using System.Collections.Generic;
 
 namespace Novovita.by.Context
 {
@@ -14,6 +12,8 @@ namespace Novovita.by.Context
         public DbSet<Contacts> Contacts { get; set; }
 
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<News> News { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -1,136 +1,52 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-}
+    var products = ViewData["Products"] as List<Product>;
+    var news = ViewData["News"] as List<News>;
 
+}
 <body>
-    <div class="preloader"><div class="spinner"></div></div>
+    <div class="preloader">
+        <img src="~/images/preloader1.svg" style="width: 300px;height: 300px;top: 50%;position: absolute;left: 50%;margin-left: -150px;margin-top: -150px;">
+    </div>
     <!-- page-wrapper start -->
     <div class="page-wrapper">
-        <!-- header start -->
-        <header class="header1">
-            <nav class="navbar nav-solid mb-0">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-                            <span></span>  <span></span>  <span></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="~/images/logo/01.png" alt="logo">
-                        </a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="main-menu">
-                        <form class="navbar-left">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </form>
-                        <ul class="nav navbar-nav f1 mainMenu text-capitalize">
-                            <li class="active">
-                                <a href="index.html">Home</a>
-                                <ul class="sub-menu">
-                                    <li class="active">
-                                        <a href="index.html">home 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">home 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="about.html">about</a>
-                            </li>
-                            <li>
-                                <a href="projects.html">projects</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="projects.html">01 projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="projects_2.html">02 projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="project-single.html">project detail</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="gallery.html">gallery</a>
-                            </li>
-                            <li>
-                                <a href="news.html">news</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="single-news.html">single news</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="contact.html">contact</a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav social-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <!-- header end -->
         <!-- main-slider start -->
         <div class="main-slider ms1">
             <div class="banner-carousel owl-carousel">
                 <div class="ms1-item">
-                    <img src="~/images/slider/01.jpg" alt="">
+                    <img src="images/123.png" alt="">
                     <div class="pos-r g-table">
                         <div class="d-middle">
                             <div class="container crop">
                                 <div class="item-inner">
                                     <span class="slider-icon">
-                                        <i class="nivio-tree-leaf"></i>
+                                        <img src="images/logo_white.svg" alt="">
                                     </span>
-                                    <p class="f2 c3 fw-4">Donate and help us change the world</p>
+                                    <p class="f2 c3 fw-4">Специально для вас</p>
                                     <div class="head-lines f1 cw mb-55">
-                                        <h1 class="fw-7">Together we</h1>
-                                        <h1 class="fw-7">can make a</h1>
-                                        <h1 class="fw-7">difference</h1>
-                                    </div> <a href="#" class="thm-btn hvr-2 bg3 c4">Start Today!</a>
+                                        <h1 class="fw-7">Картофель «черри»</h1>
+                                        <h1 class="fw-7">в пакете </h1>
+                                        <h1 class="fw-7">по 1 кг.</h1>
+                                    </div> <a href="#" class="thm-btn hvr-3 bg3 c4">Попробовать</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="ms1-item">
-                    <img src="~/images/slider/02.jpg" alt="">
+                    <img src="../images/123.png" alt="">
                     <div class="pos-r g-table">
                         <div class="d-middle">
                             <div class="container crop">
                                 <div class="item-inner">
                                     <span class="slider-icon">
-                                        <i class="nivio-tree-leaf"></i>
+                                        <img src="images/logo_white.svg" alt="">
                                     </span>
                                     <p class="f2 c3 fw-4">Donate and help us change the world</p>
                                     <div class="head-lines f1 cw mb-50">
                                         <h1 class="fw-7">Together we</h1>
                                         <h1 class="fw-7">can bring</h1>
                                         <h1 class="fw-7">the change</h1>
-                                    </div> <a href="#" class="thm-btn hvr-3 bg1 cw">support us</a>
+                                    </div> <a href="#" class="thm-btn hvr-3 bg3 cw">support us</a>
                                 </div>
                             </div>
                         </div>
@@ -140,65 +56,7 @@
         </div>
         <!-- main-slider end -->
         <!-- page-content start -->
-        <div class="page-content">
-            <div class="intro1 pb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-header text-center mb-60">
-                            <h2 class="f2 c1">welcome to novio</h2>
-                            <h1 class="f1 fw-7 c4">Time to change the world</h1>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-xs-offset-0 mb-sm-50">
-                            <div class="item">
-                                <div class="item-thumb">
-                                    <a href="#">
-                                        <img src="~/images/intro/01.jpg" alt="intro thumb">
-                                    </a>
-                                </div>
-                                <div class="item-txt text-center f1">
-                                    <h2 class="fw-6">Support a Campaign</h2>
-                                    <p class="fw-4">Quisque egestas justo nec hendrerit feugiat duide turpis porttitor sapien egestas.</p>
-                                    <a href="#" class="rdm">
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 mb-xs-50">
-                            <div class="item">
-                                <div class="item-thumb">
-                                    <a href="#">
-                                        <img src="~/images/intro/02.jpg" alt="intro thumb">
-                                    </a>
-                                </div>
-                                <div class="item-txt text-center f1">
-                                    <h2 class="fw-6">Safe Enviorement</h2>
-                                    <p class="fw-4">Quisque egestas justo nec hendrerit feugiat duide turpis porttitor sapien egestas.</p>
-                                    <a href="#" class="rdm">
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 mb-xs-50">
-                            <div class="item">
-                                <div class="item-thumb">
-                                    <a href="#">
-                                        <img src="~/images/intro/03.jpg" alt="intro thumb">
-                                    </a>
-                                </div>
-                                <div class="item-txt text-center f1">
-                                    <h2 class="fw-6">Become a Volunteer</h2>
-                                    <p class="fw-4">Quisque egestas justo nec hendrerit feugiat duide turpis porttitor sapien egestas.</p>
-                                    <a href="#" class="rdm">
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="page-content" style="margin-top: -20px;">
             <div class="hotline">
                 <div class="txt-row">
                     <div class="container">
@@ -206,10 +64,10 @@
                             <div class="col-lg-6">
                                 <div class="item">
                                     <div class="section-header">
-                                        <h2 class="f2 c1">time to change</h2>
-                                        <h1 class="f1 fw-7 c4">Join the race to make the world a better place</h1>
+                                        <h2 class="f2 c1">"Наша деятельность"</h2>
+                                        <h1 class="f1 fw-7 c4">Содействие здоровой и устойчивой жизни</h1>
                                     </div>
-                                    <p class="f1 fw-4 mt-45">Lorem ipsum dolor sit amet nsectetur cing elit. Suspe ndisse suscipit sagittis leo sit met entum estibulum dignissim posuere cubilia durae. Leo sit met entum cubilia crae.</p>
+                                    <p class="f1 fw-4 mt-45 c4">Качественный продукт с отличными вкусовыми качествами, витамины от самой природы, ощущение того, что твой труд измерим и полезен – именно это сподвигло Главу хозяйства на то, чтобы в 2001 году создать фермерское хозяйство. Прошло уже почти 20 лет и фермерское хозяйство стало одним из крупнейших в Республике Беларусь. </p>
                                 </div>
                             </div>
                         </div>
@@ -220,8 +78,8 @@
                         <div class="row pos-r">
                             <div class="col-lg-6 pos-s col-lg-push-6">
                                 <div class="vdo">
-                                    <img src="~/images/vdo/01.jpg" alt="">
-                                    <a href="https://www.youtube.com/embed/l-epKcOA7RQ?rel=0&amp;controls=0&amp;showinfo=0" class="play-button html5lightbox">
+                                    <img src="images/product.jpg" alt="">
+                                    <a href="https://www.youtube.com/watch?v=5Mko8G7ikWs" class="play-button html5lightbox">
                                         <i class="fa fa-play c4"></i>
                                     </a>
                                 </div>
@@ -234,31 +92,10 @@
                                         </span>
                                     </div>
                                     <div class="txt-box f1">
-                                        <h2 class="fw-6 cw">For any inquiries call the hotline: <span><a href="#" class="c3 fw-7">888 999 0000</a></span></h2>
+                                        <h2 class="fw-6 cw">По вопросам звоните на:<span><a href="tel:+375299422404" class="c3 fw-7">+375299422404</a></span></h2>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="brands py-100">
-                <div class="container">
-                    <div class="brand-carousel owl-carousel">
-                        <div class="brandItem text-center">
-                            <a href="#" class="brands-icon-envato"></a>
-                        </div>
-                        <div class="brandItem text-center">
-                            <a href="#" class="brands-icon-codecanyon"></a>
-                        </div>
-                        <div class="brandItem text-center">
-                            <a href="#" class="brands-icon-graphicriver"></a>
-                        </div>
-                        <div class="brandItem text-center">
-                            <a href="#" class="brands-icon-themeforest"></a>
-                        </div>
-                        <div class="brandItem text-center">
-                            <a href="#" class="brands-icon-photodune"></a>
                         </div>
                     </div>
                 </div>
@@ -306,90 +143,94 @@
                     </div>
                 </div>
             </div>
-            <!-- facts end -->
-            <div class="projects">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <h2 class="f2 c1">current compaigns</h2>
-                        <h1 class="f1 fw-7 c4">Projects arround the world</h1>
-                    </div>
-                    <div class="project-area clearfix">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-6 col-sm-8 col-xs-8 col-md-offset-3 col-sm-offset-2 col-xs-offset-2 col-lg-offset-0 project-box">
-                                <div class="row">
-                                    <div class="donate f1 fw-7 cw">
-                                        10%
-                                        <br>Donated
-                                    </div>
-                                    <div class="col-lg-6 pl-0 col-lg-push-6">
-                                        <img src="~/images/companies/01.jpg" alt="">
-                                    </div>
-                                    <div class="col-lg-6 col-lg-pull-6">
-                                        <div class="project-card">
-                                            <div class="donate f1 fw-7 cw">
-                                                10%
-                                                <br>Donated
-                                            </div>
-                                            <div class="section-header">
-                                                <h2 class="f2 c1">featured compaign</h2>
-                                                <h1 class="f1 fw-7 c4">Help the endangered species today</h1>
-                                            </div>
-                                            <p class="fw-4 f1">Lorem ipsum dolor sit amet nsectetur cing elituspe ndisse suscipit sagitis leo sit met entum estibulum dignissim posuere cubilia durae.</p>
-                                            <ul class="f1">
-                                                <li>
-                                                    <span class="c4 fw-7">Goal: <span class="c1">100000.00 USD</span></span>
-                                                </li>
-                                                <li>
-                                                    <span class="c4 fw-7">Raised: <span class="c1">20000.00 USD</span></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+            <div class="volunteer mt-100">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="gallery-carousel owl-carousel">
+                            @foreach (var prod in products)
+                            {
+                                <div class="gallery-single">
+                                    <a href="index.html">
+                                        <img src="images/products/@prod.MainImage" alt="">
+                                        <h3>@prod.Name</h3>
+                                        <p class="price">Цена: <strong>@prod.Cost p</strong></p>
+                                        <p class="c1 availability">в наличии</p>
+                                    </a>
                                 </div>
-                            </div>
+                            }
+
+
                         </div>
                     </div>
-                    <div class="project-blocks">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-6 mt-30">
-                                <div class="item clearfix">
-                                    <img src="~/images/companies/02.jpg" alt="">
-                                    <div class="item-content tnz bg2 cw f1">
-                                        <h2 class="fw-7">
-                                            <a href="project-single.html">Energy Preservation</a>
-                                        </h2>
-                                        <p class="fw-4">Quisque egestas justo nec hendrerit feugiat duide turpis ase porttitor sapien egestas sollicitudin.</p>
-                                        <a href="project-single.html" class="rdm">
-                                            <i class="fa fa-angle-right c2"></i>
-                                        </a>
+                    <div class="col-lg-6">
+                        <div class="volunteer-banner">
+                            <div class="section-header">
+                                <h2 class="f2 c3">how we help</h2>
+                                <h1 class="f1 fw-7 cw">Become a volunteer</h1>
+                            </div>
+                            <p class="txt-normal cw">Quisque egestas justo nec hendrerit feugiat duide turpis porttitor sapien egestas sollicitudin nisibero in nunc pellentesque.</p> <a href="#" class="thm-btn hvr-2 bg3">join us now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-sm-12">
+                        <div class="volunteer-tab clearfix">
+                            <div class="section-header text-center">
+                                <h2 class="f2 c1">Почему именно мы?</h2>
+                                <h1 class="f1 fw-7 c4">Причины покупать у нас</h1>
+                            </div>
+                            <ul class="tab-list list-inline text-center">
+                                <li>
+                                    <a href="#t1" data-toggle="tab" class="fw-5">
+                                        <i class="nivio-shirt c1"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#t2" data-toggle="tab" class="fw-5">
+                                        <i class="nivio-newspaper c1"></i>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#t3" data-toggle="tab" class="fw-5">
+                                        <i class="nivio-apple c1"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#t4" data-toggle="tab" class="fw-5">
+                                        <i class="nivio-recycle-solid c1"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#t5" data-toggle="tab" class="fw-5">
+                                        <i class="nivio-light-bulb c1"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content text-center">
+                                <div class="tab-pane fade" id="t1">
+                                    <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
+                                        <p class="txt-normal">Начинаем отгружать продукцию с первых чисел июля и заканчиваем в апреле-мае Вы сможете иметь стабильный объем со стабильным качеством – ведь на всей цепочке производства у нас работают и автоматизированная техника, и дополнительно инспектируют наши сотрудники. </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 mt-30">
-                                <div class="item clearfix">
-                                    <img src="~/images/companies/03.jpg" alt="">
-                                    <div class="item-content tnz bg2 cw f1">
-                                        <h2 class="fw-7">
-                                            <a href="project-single.html">Energy Preservation</a>
-                                        </h2>
-                                        <p class="fw-4">Quisque egestas justo nec hendrerit feugiat duide turpis ase porttitor sapien egestas sollicitudin.</p>
-                                        <a href="project-single.html" class="rdm">
-                                            <i class="fa fa-angle-right c2"></i>
-                                        </a>
+                                <div class="tab-pane fade" id="t2">
+                                    <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
+                                        <p class="txt-normal">Наш продукт упакован только в качественную и сертифицированную упаковку – это позволяет Вам привлечь внимание потребителя и увеличить объем продаж.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-0 col-lg-offset-0 mt-30">
-                                <div class="item clearfix">
-                                    <img src="~/images/companies/04.jpg" alt="">
-                                    <div class="item-content tnz bg2 cw f1">
-                                        <h2 class="fw-7">
-                                            <a href="project-single.html">Energy Preservation</a>
-                                        </h2>
-                                        <p class="fw-4">Quisque egestas justo nec hendrerit feugiat duide turpis ase porttitor sapien egestas sollicitudin.</p>
-                                        <a href="project-single.html" class="rdm">
-                                            <i class="fa fa-angle-right c2"></i>
-                                        </a>
+                                <div class="tab-pane fade" id="t3">
+                                    <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
+                                        <p class="txt-normal">Каждый раз искать поставщика и каждый раз выезжать и проверять груз – потом переживать – а качественный ли там продукт – это Вам знакомо? У нас введены стандарты и мы работаем по стандартам круглый год. Вы можете быть уверены – продукция придет согласно заказу, даже на случай форс-мажора – мы заменим продукцию в кратчайшие сроки.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade in active" id="t4">
+                                    <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
+                                        <p class="txt-normal">35 собственных автомобилей с рефрижераторами позволяют гарантировать поставку в согласованный сторонами срок.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="t5">
+                                    <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
+                                        <p class="txt-normal">Заказы принимаем быстро и оперативно.</p>
                                     </div>
                                 </div>
                             </div>
@@ -397,29 +238,68 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="brands py-100">
+                <div class="container">
+                    <div class="brand-carousel owl-carousel">
+                        <div class="brandItem text-center">
+                            <img src="images/store/1.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/2.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/3.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/4.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/5.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/6.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/7.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/8.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/9.jpg" alt="">
+                        </div>
+                        <div class="brandItem text-center">
+                            <img src="images/store/10.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="testimony mt-md pt-md">
                 <div class="container">
                     <div class="section-header text-center">
-                        <h2 class="f2 c1">testimonials</h2>
-                        <h1 class="f1 fw-7 c4">What customers says</h1>
+                        <h2 class="f2 c1">рекомендации</h2>
+                        <h1 class="f1 fw-7 c4">Что говорит клиенты</h1>
                     </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
                             <div class="testimonial owl-carousel">
                                 <div class="pw-item f1 text-center">
-                                    <p>This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Novio in my opinion deserves support for its projects.</p>
-                                    <img src="~/images/testimony/01.png" alt="">
-                                    <p class="name fw-7 c1">john smith</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquam voluptate consequatur, rem minima ad id consectetur, accusantium, esse eligendi cum facere suscipit quia nisi illum debitis?</p>
+                                    <img src="images/testimony/01.png" alt="">
+                                    <p class="name fw-7 c1">Саша Белый</p>
                                 </div>
                                 <div class="pw-item f1 text-center">
-                                    <p>This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Novio in my opinion deserves support for its projects.</p>
-                                    <img src="~/images/testimony/02.png" alt="">
-                                    <p class="name fw-7 c1">allen stwart</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nisi voluptatem maxime dolorem a qui. Eius voluptatibus eum, natus rem non libero, rerum earum ab provident, quas iusto!</p>
+                                    <img src="images/testimony/02.png" alt="">
+                                    <p class="name fw-7 c1">Юша Черный</p>
                                 </div>
                                 <div class="pw-item f1 text-center">
-                                    <p>This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Novio in my opinion deserves support for its projects.</p>
-                                    <img src="~/images/testimony/03.png" alt="">
-                                    <p class="name fw-7 c1">maria dove</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sit velit non, omnis possimus ad, eaque officia, voluptatibus dolorum, quae laboriosam magni repellat dicta magnam est similique vitae.</p>
+                                    <img src="images/testimony/03.png" alt="">
+                                    <p class="name fw-7 c1">Петя, просто Петя</p>
                                 </div>
                             </div>
                         </div>
@@ -429,155 +309,46 @@
             <div class="blog">
                 <div class="container">
                     <div class="section-header text-center">
-                        <h2 class="f2 c1">news & articles</h2>
-                        <h1 class="f1 fw-7 c4">Recent posts and updates</h1>
+                        <h2 class="f2 c1">Новости и статьи</h2>
+                        <h1 class="f1 fw-7 c4">Последние новости и обновления</h1>
                     </div>
                     <div class="blog-post owl-carousel">
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/01.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Aug</p>
-                                        <p class="fw-7">20</p>
+
+                        @foreach (var blog in news)
+                        {
+                            <div class="col-md-4">
+                                <div class="blog-card" style="min-height:300px;">
+                                    <div class="blog-text" style="background: url(images/news/@blog.Image);background-size: cover;">
+                                        <div class="date f1 bg3">
+                                            <p class="fw-6">Aug</p>
+                                            <p class="fw-7">20</p>
+                                        </div>
+                                        <a href="single-news.html" class="title f1 fw-7 cw">
+                                            <span>@blog.Title</span>
+                                        </a>
                                     </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>Eco System Responsible For Green Energy</span>
-                                    </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/02.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Aug</p>
-                                        <p class="fw-7">09</p>
-                                    </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>Don’t Throw Away, Recycle For Your Another Day</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/03.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Aug</p>
-                                        <p class="fw-7">02</p>
-                                    </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>You Have The Power Today To Change Tomorrow</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/04.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Jul</p>
-                                        <p class="fw-7">30</p>
-                                    </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>Save World By Planting Trees Your Sournding</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/01.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Aug</p>
-                                        <p class="fw-7">20</p>
-                                    </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>Eco System Responsible For Green Energy</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/02.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Aug</p>
-                                        <p class="fw-7">09</p>
-                                    </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>Don’t Throw Away, Recycle For Your Another Day</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/03.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Aug</p>
-                                        <p class="fw-7">02</p>
-                                    </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>You Have The Power Today To Change Tomorrow</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <a href="single-news.html">
-                                    <img src="~/images/blog/04.jpg" alt="">
-                                </a>
-                                <div class="blog-text">
-                                    <div class="date f1 bg3">
-                                        <p class="fw-6">Jul</p>
-                                        <p class="fw-7">30</p>
-                                    </div>
-                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                        <span>Save World By Planting Trees Your Sournding</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        }
+
                     </div>
                 </div>
+
             </div>
         </div>
-        <!-- page-content end -->
-        <!-- footer start -->
-        <footer>
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 mb-xs-30">
+    </div>
+    <!-- page-content end -->
+    <!-- footer start -->
+    <footer>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-contact f1 col-md-12">
                             <a href="#">
-                                <img src="~/images/logo/02.png" alt="">
+                                <img src="images/logo.svg" alt="" style="width:150px">
                             </a>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="list-inline text-right">
+                            <ul class="list-inline">
                                 <li>
                                     <a href="#"><i class="c4 fa fa-twitter"></i></a>
                                 </li>
@@ -593,101 +364,85 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="footer-middle">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 clearfix mb-sm-50">
-                            <div class="fooler-col f1">
-                                <h2 class="footer-title">conmpany</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">about</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">our team</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">missions</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">our projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="fooler-col f1">
-                                <h2 class="footer-title">services</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">Recycling</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ecosystem</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Organic</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Biology</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="fooler-col f1">
-                                <h2 class="footer-title">links</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">Help</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Support</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Clients</a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="col-md-6 clearfix mb-sm-50">
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">conmpany</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">about</a>
+                                </li>
+                                <li>
+                                    <a href="#">our team</a>
+                                </li>
+                                <li>
+                                    <a href="#">missions</a>
+                                </li>
+                                <li>
+                                    <a href="#">our projects</a>
+                                </li>
+                                <li>
+                                    <a href="#">contact</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-3 mb-sm-50">
-                            <div class="footer-contact">
-                                <h2 class="footer-title">Contact</h2>
-                                <h3>
-                                    855 Road Broklyn Street, 600
-                                    New York, USA
-                                </h3>
-                                <ul>
-                                    <li><i class="fa fa-envelope"></i> needhelp@novio.com</li>
-                                    <li><i class="fa fa-phone-square"></i> 888 999 0000</li>
-                                </ul>
-                            </div>
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">services</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Recycling</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ecosystem</a>
+                                </li>
+                                <li>
+                                    <a href="#">Organic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Biology</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-3">
-                            <div class="footer-contact f1">
-                                <h2 class="footer-title">newslater</h2>
-                                <form>
-                                    <input type="email" placeholder="Email address">
-                                    <button type="submit">Subscribe</button>
-                                </form>
-                            </div>
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">links</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                                <li>
+                                    <a href="#">Support</a>
+                                </li>
+                                <li>
+                                    <a href="#">Clients</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="col-md-3 mb-sm-50">
+                        <div class="footer-contact">
+                            <h2 class="footer-title">Contact</h2>
+                            <h3>855 Road Broklyn Street, 600 New York, USA</h3>
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> needhelp@novio.com</li>
+                                <li><i class="fa fa-phone-square"></i> 888 999 0000</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="footer-bottom f1">
-                <div class="container">
-                    <p>© copyright 2018 by Layerdrops.com</p>
-                </div>
+        </div>
+        <div class="footer-bottom f1">
+            <div class="container">
+                <p>NovoVita © 2018 | Все права защищены</p>
             </div>
-        </footer>
-        <!-- footer end -->
+        </div>
+    </footer>
+    <!-- footer end -->
     </div>
     <!-- page-wrapper end -->
     <div class="back2Top bg1">
         <i class="fa fa-angle-up fa-2x cw"></i>
     </div>
-   
+
 </body>
 
