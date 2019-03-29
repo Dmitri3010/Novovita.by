@@ -84,7 +84,7 @@ function owlCarouselActivation() {
             smartSpeed: 500,
             nav: true,
             dotsEach: false,
-            items: 3,
+            items: 2,
             responsive: {
                 0 : {
                     margin: 15,

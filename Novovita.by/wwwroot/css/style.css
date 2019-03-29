@@ -60,14 +60,14 @@
 
 /* @imports */
 
-@import url('bootstrap.min.css');
-@import url('font-awesome.min.css');
-@import url('icon.css');
-@import url('brands.css');
-@import url('animate.css');
-@import url('magnific-popup.css');
-@import url('owl.carousel.css');
-@import url('reset.css');
+@import url('../css/bootstrap.min.css');
+@import url('../css/font-awesome.min.css');
+@import url('../css/icon.css');
+@import url('../css/brands.css');
+@import url('../css/animate.css');
+@import url('../css/magnific-popup.css');
+@import url('../css/owl.carousel.css');
+@import url('../css/reset.css');
 
 /* theme colors */
 
@@ -155,8 +155,10 @@
 }
 
 .op-header {
+	
 	background: url(../images/bg_blog.jpg) no-repeat center center;
 	-webkit-background-size: cover;
+	background-position-y: 0px;
 	background-size: cover;
 	padding-top: 104px;
 	padding-bottom: 137px;
@@ -762,11 +764,18 @@
 /* intro1 */
 
 .feedback_form{
-	background: #83bb25;
+	background: #83bb25 url(../images/Tomato.png) ;
+	background-repeat: no-repeat;
+	background-size: 50%;
 	padding: 80px 0;
+	
 	
 }
 .feedback_form .section-header a{
+	font-size: 24px; 
+	padding: 0 10px;
+}
+.feedback_form img{
 	font-size: 24px; 
 	padding: 0 10px;
 }
@@ -1322,17 +1331,26 @@
 }
 
 .single-project {
-	padding-top: 120px;
+	padding-top: 80px;
 	padding-bottom: 122px;
+}
+.single-project .container{
+	BACKGROUND: #f4faed;
 }
 
 .single-project-content .section-header > h2 > span {
 	color: #737373
 }
 
+.single-project-content h1 {
+	color: white;
+	background: #83bb25;
+	padding: 20px;
+}
+
+
 .project-area,
 .project-single {
-	background: #f4f3f0;
 	position: relative;
 }
 
@@ -1424,7 +1442,32 @@
 	display: block;
 	overflow: hidden;
 }
+.project-blocks .gallery-single a {
+    display: block;
+    position: relative;
+    background: #f4faed;
+    padding: 20px 20px 80px;
+    z-index: 1;
+	background: #f4faed;
+    padding: 20px 20px 80px;
+}
 
+.project-blocks .gallery-single h3 {
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+}
+
+.project-blocks .gallery-single .price {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+.project-blocks .gallery-single .availability {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
 .item-content {
 	position: absolute;
 	width: 100%;
@@ -1508,7 +1551,8 @@
 }
 
 .gallery-filter li:not(:last-of-type) {
-	margin-right: 20px;
+	margin-right: 60px;
+	margin-bottom: 20px;
 }
 
 /* single-project start */
@@ -1567,7 +1611,6 @@
 
 .content-nav {
 	border-top: 2px solid #f4f3f0;
-	border-bottom: 2px solid #f4f3f0;
 	padding-top: 47px;
 	padding-bottom: 52px;
 }
