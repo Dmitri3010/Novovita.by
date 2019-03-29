@@ -1,9 +1,27 @@
-﻿<body>
+﻿@model IEnumerable<Novovita.by.Models.Product>
+@{
+    var categories = ViewData[nameof(Category)] as List<Category>;
+    var catId = ViewData["categoryid"] as int?;
+
+}
+
+<script>
+    var idForUpdate = '#products-div';
+    var categoryId= @(categories?.FirstOrDefault()?.Id);
+    function updateProducts()
+    {
+        getProducts(idForUpdate, categoryId)
+    }
+    document.addEventListener("DOMContentLoaded", updateProducts);
+</script>
+
+<body>
+
     <div class="preloader">
         <img src="~/images/preloader1.svg" style="width: 300px;height: 300px;top: 50%;position: absolute;left: 50%;margin-left: -150px;margin-top: -150px;">
     </div>    <!-- page-wrapper start -->
     <div class="page-wrapper">
-              <!-- op-header start -->
+        <!-- op-header start -->
         <div class="op-header background" style="background: url(../images/bg_catalog.jpg) no-repeat;background-size: cover;">
             <div class="section-header text-center">
                 <h2 class="f2 c3">наш, родимый</h2>
@@ -17,94 +35,38 @@
                 <div class="container">
                     <div class="gallery-filter mb-30 f1">
                         <ul class="post-filter masonary text-center list-inline text-capitalize">
-                            <li>
-                                <span class="fw-7">Морковь <br>мытая</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Картофель мытый <br>красный</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Картофель мытый<br> белый</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Петрушка<br> корневая</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Пастернак <br>свежий</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Пюре<br> морковное</span>
-                            </li>
+                            @foreach (var category in categories)
+                            {
+                                <li>
+                                    <span class="fw-7" onclick="categoryId=@category.Id; updateProducts();">@category.Name</span>
+                                </li>
+                            }
+
+                            @*<li>
+                                    <span class="fw-7">Картофель мытый <br>красный</span>
+                                </li>
+                                <li>
+                                    <span class="fw-7">Картофель мытый<br> белый</span>
+                                </li>
+                                <li>
+                                    <span class="fw-7">Петрушка<br> корневая</span>
+                                </li>
+                                <li>
+                                    <span class="fw-7">Пастернак <br>свежий</span>
+                                </li>
+                                <li>
+                                    <span class="fw-7">Пюре<br> морковное</span>
+                                </li>*@
                         </ul>
                         <!-- /.post-filter -->
                     </div>
                     <!-- /.gallery-filter -->
-                    <div class="row project-blocks masonary-layout filter-layout">
-                        <div class="row">
-                            <div class="col-lg-12 col-sm-12 col-xs-12 mt-30">
-                                <div class="col-md-8">
-                                    <h2 class="fw-7 pb-20 c4" style="line-height: 1.5;">Наш ассортимент</h2>
-                                    <p class="txt-normal col-lg-9">
-                                        Свежие мытые овощи в упаковке – источник необходимых организму витаминов и микроэлементов. <br> В нашем каталоге представлены овощи, созданные самой природой, аккуратно вымытые и тщательно упакованные на собственной линии. <br><br>
-                                        Мы ориентированы на розничную и оптовую торговлю, предлагаем высококачественные овощи для ресторанов, кафе, санаториев, гипермаркетов и продуктовых магазинов, и заинтересованы в том, чтобы увеличить ассортимент наших клиентов.
-                                    </p>
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="../images/morkov_b.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-xs-12 mt-30">
-                                <div class="gallery-single">
-                                    <a href="index.html">
-                                        <img src="../images/volunteer/05.jpg" alt="">
-                                        <h3>Морковка вкусная</h3>
-                                        <p class="price">Цена: <strong>10p</strong></p>
-                                        <p class="c1 availability">в наличии</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-xs-12 masonary-item animal energy mt-30">
-                                <div class="gallery-single">
-                                    <a href="index.html">
-                                        <img src="../images/volunteer/05.jpg" alt="">
-                                        <h3>Морковка вкусная</h3>
-                                        <p class="price">Цена: <strong>10p</strong></p>
-                                        <p class="c1 availability">в наличии</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-xs-12 masonary-item water ecology mt-30">
-                                <div class="gallery-single">
-                                    <a href="index.html">
-                                        <img src="../images/volunteer/05.jpg" alt="">
-                                        <h3>Морковка вкусная</h3>
-                                        <p class="price">Цена: <strong>10p</strong></p>
-                                        <p class="c1 availability">в наличии</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-xs-12 masonary-item welding mt-30">
-                                <div class="gallery-single">
-                                    <a href="index.html">
-                                        <img src="../images/volunteer/05.jpg" alt="">
-                                        <h3>Морковка вкусная</h3>
-                                        <p class="price">Цена: <strong>10p</strong></p>
-                                        <p class="c1 availability">в наличии</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-xs-12 masonary-item animal nature mt-30">
-                                <div class="gallery-single">
-                                    <a href="index.html">
-                                        <img src="../images/volunteer/05.jpg" alt="">
-                                        <h3>Морковка вкусная</h3>
-                                        <p class="price">Цена: <strong>10p</strong></p>
-                                        <p class="c1 availability">в наличии</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+                    <div id="products-div"></div>
+
+
+
                     <div class="gallery-filter mt-70 mb-0 f1">
                         <ul class="post-filter masonary text-center list-inline text-capitalize">
                             <li>

@@ -38,5 +38,12 @@ namespace Novovita.by.Repository
 
             return set;
         }
+
+        public static List<Product> GetFiltered(int categoryId)
+        {
+            var prod = db.Products.Where(p => p.CategoryId == categoryId).ToList();
+
+            return prod;
+        }
     }
 }

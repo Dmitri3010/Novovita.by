@@ -41,6 +41,8 @@ namespace Novovita.by.Controllers
         public IActionResult Product()
         {
             var products = Products.Get();
+            var categories = Categories.Get();
+            ViewData[nameof(Category)] = categories;
             return View(products);
 
         }
@@ -54,6 +56,16 @@ namespace Novovita.by.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Filtered(int categoryId)
+        {
+            var products = Products.GetFiltered(categoryId);
+            var category = Categories.Get(categoryId);
+            ViewData["Product"] = products;
+            return PartialView(category);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
