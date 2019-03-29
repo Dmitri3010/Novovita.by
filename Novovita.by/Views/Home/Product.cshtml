@@ -42,23 +42,8 @@
                                 </li>
                             }
 
-                            @*<li>
-                                    <span class="fw-7">Картофель мытый <br>красный</span>
-                                </li>
-                                <li>
-                                    <span class="fw-7">Картофель мытый<br> белый</span>
-                                </li>
-                                <li>
-                                    <span class="fw-7">Петрушка<br> корневая</span>
-                                </li>
-                                <li>
-                                    <span class="fw-7">Пастернак <br>свежий</span>
-                                </li>
-                                <li>
-                                    <span class="fw-7">Пюре<br> морковное</span>
-                                </li>*@
-                        </ul>
-                        <!-- /.post-filter -->
+                           </ul>
+                        
                     </div>
                     <!-- /.gallery-filter -->
 
@@ -69,24 +54,13 @@
 
                     <div class="gallery-filter mt-70 mb-0 f1">
                         <ul class="post-filter masonary text-center list-inline text-capitalize">
-                            <li>
-                                <span class="fw-7">Морковь <br>мытая</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Картофель мытый <br>красный</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Картофель мытый<br> белый</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Петрушка<br> корневая</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Пастернак <br>свежий</span>
-                            </li>
-                            <li>
-                                <span class="fw-7">Пюре<br> морковное</span>
-                            </li>
+                            @foreach (var category in categories)
+                            {
+                                <li>
+                                    <span class="fw-7" onclick="categoryId=@category.Id; updateProducts();">@category.Name</span>
+                                </li>
+                            }
+
                         </ul>
                         <!-- /.post-filter -->
                     </div>

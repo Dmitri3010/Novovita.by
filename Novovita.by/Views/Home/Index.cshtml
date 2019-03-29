@@ -150,7 +150,7 @@
                             @foreach (var prod in products)
                             {
                                 <div class="gallery-single">
-                                    <a href="index.html">
+                                    <a asp-action="SingleProduct" asp-route-id="@prod.Id">
                                         <img src="images/products/@prod.MainImage" alt="">
                                         <h3>@prod.Name</h3>
                                         <p class="price">Цена: <strong>@prod.Cost p</strong></p>

@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Novovita.by.Models;
 using Novovita.by.Repository;
@@ -49,12 +50,15 @@ namespace Novovita.by.Controllers
 
         public IActionResult SingleNews(int id)
         {
-            return View();
+            var news = NewsRepository.Get(id);
+            ViewData["News"] = NewsRepository.Get().Take(5).ToList();
+            return View(news);
         }
 
         public IActionResult SingleProduct(int id)
         {
-            return View();
+            var product = Products.Get(id);
+            return View(product);
         }
 
         [HttpGet]

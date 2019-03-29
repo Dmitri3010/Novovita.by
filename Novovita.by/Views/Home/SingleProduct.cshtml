@@ -1,4 +1,10 @@
-﻿<div class="preloader">
+﻿@model Novovita.by.Models.Product
+@{ 
+    var next = Model.Id + 1;
+    var previos = Model.Id - 1;
+}
+
+<div class="preloader">
     <img src="~/images/preloader1.svg" style="width: 300px;height: 300px;top: 50%;position: absolute;left: 50%;margin-left: -150px;margin-top: -150px;">
 </div>
 <div class="page-wrapper">
@@ -12,7 +18,7 @@
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-md-7 mt-20">
-                                <h2 class="f1 fw-7 c4">Морковь Мытая</h2>
+                                <h2 class="f1 fw-7 c4">@Model.Name</h2>
                             </div>
                             <div class="col-md-5 offset-lg-1 text-right">
                                 <a href="#" class="thm-btn hvr-2 bg4">есть вопросы?  Контакты</a>
@@ -29,10 +35,18 @@
                         <div class="project-sidebar">
                             <div class="project-single">
                                 <div class="img-box">
-                                    <img src="../images/morkov_b.png" alt="">
+                                    <img src="~/images/products/@Model.MainImage" alt="">
                                 </div>
                                 <div class="project-card text-center">
-                                    <p class="c1 pb-20">в наличии</p>
+                                    @if (Model.Count > 0)
+                                    {
+                                        <p class="c1 pb-20">в наличии</p>
+                                    }
+                                    else 
+                                    {
+                                    <p class="c1 pb-20">нет наличии</p>
+                                    }
+
                                     <a href="#" class="thm-btn hvr-3 bg3 c4">Оставить заявку</a>
                                 </div>
                             </div>
@@ -41,22 +55,18 @@
                     <div class="col-md-8">
                         <div class="single-project-content">
                             <div class="section-header mb-30">
-                                <h1 class="f1 fw-7 row ">Картофель мытый 2,5 кг</h1>
+                                <h1 class="f1 fw-7 row ">@Model.Name</h1>
                             </div>
                             <h3 class="price mb-10 f1 fw-7">240 руб.</h3>
                             <p class="txt-normal">
-                                Фасованный в упаковку типа “домик” – вязанная сетка по 2,5 кг. <br>
-                                Калибр: 45/55, 55/65, 65/75, 57 мм + <br>
-                                Транспортная тара: <br>
-                                • лоток картонный пятислойный 15-18 кг, обмотанный паллетной сеткой либо пленкой по запросу; <br>
-                                • сетка на 25 кг. запаллетирована и обмотана паллетной сеткой.
+                              @Model.Discription
                             </p>
                             <div class="content-footer mt-45">
                                 <div class="content-nav mt-60 f1">
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <h2>
-                                                <a href="#" class="fw-6 c4">
+                                                <a asp-action="SingleProduct" asp-route-id="@previos" class="fw-6 c4">
                                                     <i class="fa fa-angle-left pr-10"></i>
                                                     Previous
                                                 </a>
@@ -64,7 +74,7 @@
                                         </div>
                                         <div class="col-xs-6 text-right">
                                             <h2>
-                                                <a href="#" class="fw-6 c4">
+                                                <a  asp-action="SingleProduct" asp-route-id="@previos" class="fw-6 c4">
                                                     Next
                                                     <i class="fa fa-angle-right pl-10"></i>
                                                 </a>

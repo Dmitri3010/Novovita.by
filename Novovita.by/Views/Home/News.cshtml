@@ -32,12 +32,12 @@
                                                 <p>Aug</p>
                                                 <p>20</p>
                                             </div>
-                                            <img src="../images/news/@news.Image" alt="">
+                                            <img src="~/images/news/@news.Image" alt="">
                                         </div>
                                         <div class="card-txt">
 
                                             <h2 class="card-title f1 fw-7">
-                                                <a href="single-news.html">@news.Title</a>
+                                                <a a  asp-action="SingleNews" asp-route-id="@news.Id">@news.Title</a>
                                             </h2>
                                             <p class="txt-normal">@news.Discription</p>
                                         </div>
