@@ -1,0 +1,39 @@
+﻿@model Novovita.by.Models.Category
+@using Novovita.by.Models
+@{
+    var products = ViewData["Product"] as List<Product>;
+   
+    var ten = ViewData["adasd"] as int?;
+}
+
+
+<div class="row project-blocks masonary-layout filter-layout">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12 mt-30">
+            <div class="col-md-8">
+                <h2 class="fw-7 pb-20 c4" style="line-height: 1.5;">Наш ассортимент</h2>
+                <p class="txt-normal col-lg-9">
+                    @Model.Discription
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img src="../images/categories/@Model.Image" alt="">
+            </div>
+        </div>
+        @foreach (var prod in products)
+        {
+            <div class="col-lg-4 col-sm-6 col-xs-12 mt-30">
+                <div class="gallery-single">
+                    <a href="index.html">
+                        <img src="../images/products/@prod.MainImage" alt="">
+                        <h3>@prod.Name</h3>
+                        <p class="price">Цена: <strong>@prod.Cost</strong></p>
+                        <p class="c1 availability">в наличии</p>
+                    </a>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
