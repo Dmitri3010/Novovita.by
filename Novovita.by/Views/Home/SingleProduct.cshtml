@@ -1,7 +1,8 @@
 ﻿@model Novovita.by.Models.Product
 @{ 
-    var next = Model.Id + 1;
-    var previos = Model.Id - 1;
+    var products = ViewData[nameof(Product)] as List<Product>;
+    var next = ViewData["next"] as Product;
+    var previos = ViewData["previos"] as Product;
 }
 
 <div class="preloader">
@@ -66,16 +67,16 @@
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <h2>
-                                                <a asp-action="SingleProduct" asp-route-id="@previos" class="fw-6 c4">
+                                                <a asp-action="SingleProduct" asp-route-id="@previos.Id" class="fw-6 c4">
                                                     <i class="fa fa-angle-left pr-10"></i>
-                                                    Previous
+                                                   Предыдущий 
                                                 </a>
                                             </h2>
                                         </div>
                                         <div class="col-xs-6 text-right">
                                             <h2>
-                                                <a  asp-action="SingleProduct" asp-route-id="@previos" class="fw-6 c4">
-                                                    Next
+                                                <a  asp-action="SingleProduct" asp-route-id="@next.Id" class="fw-6 c4">
+                                                    Следующий
                                                     <i class="fa fa-angle-right pl-10"></i>
                                                 </a>
                                             </h2>

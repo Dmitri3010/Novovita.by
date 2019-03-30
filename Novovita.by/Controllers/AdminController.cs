@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Novovita.by.Models;
 using Novovita.by.Repository;
@@ -10,6 +11,7 @@ using System.Linq;
 
 namespace Novovita.by.Controllers
 {
+    [Authorize]
     public class AdminController:Controller
     {
         private static string WebRootPath => Statics.WebRootPath;
