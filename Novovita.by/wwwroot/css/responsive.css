@@ -1723,3 +1723,9 @@
     width: 68%;
   }
 }
+
+@media (max-width: 1378px) and (min-width: 992px) {
+    .hidden-md {
+        display: none !important;
+    }
+}

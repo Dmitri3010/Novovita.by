@@ -2332,8 +2332,15 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
+    height:220px;
 }
 
+.single-news-content .card-thumb {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: auto;
+}
 .card-thumb img {
 	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
@@ -2420,6 +2427,7 @@
 .news-single {
 	padding-top: 120px;
 	padding-bottom: 120px;
+    max-height:none;
 }
 
 .news-single .card-title {
