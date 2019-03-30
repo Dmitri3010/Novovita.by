@@ -2921,6 +2921,14 @@ footer {
 	font-size: 16px;
 	font-weight: 600;
 }
+.Close-spam {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    background: #f4f3f0;
+    height: 150px;
+    z-index: 100110;
+}
 
 /************************************/
 
