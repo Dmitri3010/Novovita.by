@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Novovita.by.Models;
 using Novovita.by.Repository;
+using Novovita.by.Tools;
 
 namespace Novovita.by.Controllers
 {
@@ -43,6 +44,10 @@ namespace Novovita.by.Controllers
         {
             var products = Products.Get();
             var categories = Categories.Get();
+            foreach(var prod in products)
+            {
+                prod.Category = Categories.Get(prod.CategoryId);
+            }
             ViewData[nameof(Category)] = categories;
             return View(products);
 
@@ -51,6 +56,8 @@ namespace Novovita.by.Controllers
         public IActionResult SingleNews(int id)
         {
             var news = NewsRepository.Get(id);
+          //  var date = DateParse.Parse(news.Date);
+
             ViewData["News"] = NewsRepository.Get().Take(5).ToList();
             return View(news);
         }
@@ -58,10 +65,12 @@ namespace Novovita.by.Controllers
         public IActionResult SingleProduct(int id)
         {
             var product = Products.Get(id);
+            product.Category = Categories.Get(product.CategoryId);
             var products = Products.Get();
             if (Products.Get(id + 1) != null)
             {
                 var nextProduct = Products.Get(id + 1);
+                nextProduct.Category = Categories.Get(id + 1);
                 ViewData["next"] = nextProduct;
             }
             else
@@ -72,6 +81,7 @@ namespace Novovita.by.Controllers
             if (Products.Get(id - 1) != null)
             {
                 var previosProduct = Products.Get(id - 1);
+                previosProduct.Category = Categories.Get(id - 1);
                 ViewData["previos"] = previosProduct;
             }
 

@@ -26,10 +26,10 @@
                             <div class="single-news-content">
                                 <div class="card-thumb mb-25">
                                     <div class="date f1 c4">
-                                        <p>Aug</p>
-                                        <p>20</p>
+                                        <p>@Model.Date.ToString("MMM")</p>
+                                        <p>@Model.Date.Day</p>
                                     </div>
-                                    <img src="../images/news/@Model.Image" alt="">
+                                    <img src="../../images/news/@Model.Image" alt="">
                                 </div>
                                 <div class="card-txt">
 
@@ -64,12 +64,12 @@
                                         <div class="col-md-4">
                                             <div class="blog-card">
                                                 <a asp-action="SingleNews" asp-route-id="@newslist.Id">
-                                                    <img src="../images/news/@newslist.Image" alt="">
+                                                    <img src="../../images/news/@newslist.Image" alt="">
                                                 </a>
                                                 <div class="blog-text">
                                                     <div class="date f1 bg3">
-                                                        <p class="fw-6">Aug</p>
-                                                        <p class="fw-7">20</p>
+                                                        <p class="fw-6">@newslist.Date.ToString("MMM")</p>
+                                                        <p class="fw-7">@newslist.Date.Day</p>
                                                     </div>
                                                     <a href="single-news.html" class="title f1 fw-7 cw">
                                                         <span>@newslist.Title </span>
