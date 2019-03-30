@@ -1,4 +1,4 @@
-﻿
+﻿@model Novovita.by.Models.EmailMessage
 <body>
     <div class="preloader">
         <img src="~/images/preloader1.svg" style="width: 300px;height: 300px;top: 50%;position: absolute;left: 50%;margin-left: -150px;margin-top: -150px;">
@@ -49,19 +49,19 @@
                             <div class="col-md-6">
                                 <div class="col-md-12">
 
-                                    <form>
+                                    <form asp-action="Contacts" asp-controller="Home" asp-anti-forgery="true">
                                         <div class="row">
                                             <div class="col-md-6 mb-30">
-                                                <input type="text" placeholder="Ваше имя *">
+                                                <input asp-for="Name" type="text" placeholder="Ваше имя *">
                                             </div>
                                             <div class="col-md-6 mb-30">
-                                                <input type="email" placeholder="Email адрес *">
+                                                <input asp-for="Email" type="email" placeholder="Email адрес *">
                                             </div>
                                             <div class="col-md-12 mb-30">
-                                                <input type="text" placeholder="Телефон">
+                                                <input asp-for="Phone" type="text" placeholder="Телефон">
                                             </div>
                                             <div class="col-md-12 mb-30">
-                                                <textarea placeholder="Сообщение"></textarea>
+                                                <textarea asp-for="Message" placeholder="Сообщение"></textarea>
                                             </div>
                                             <div class="col-md-12 text-center">
                                                 <button type="submit" class="thm-btn cw bg2">Отправить сообщение</button>

@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Novovita.by.Models;
 using Novovita.by.Repository;
-using Novovita.by.Tools;
+using Novovita.by.Services;
 
 namespace Novovita.by.Controllers
 {
@@ -28,8 +28,13 @@ namespace Novovita.by.Controllers
 
         public IActionResult Contacts()
         {
-            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult Contacts(EmailMessage emailMessage)
+        {
+            EmailSender.Send(emailMessage);
             return View();
         }
 
@@ -56,8 +61,6 @@ namespace Novovita.by.Controllers
         public IActionResult SingleNews(int id)
         {
             var news = NewsRepository.Get(id);
-          //  var date = DateParse.Parse(news.Date);
-
             ViewData["News"] = NewsRepository.Get().Take(5).ToList();
             return View(news);
         }
