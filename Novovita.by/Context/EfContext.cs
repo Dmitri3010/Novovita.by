@@ -19,8 +19,8 @@ namespace Novovita.by.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer("Data Source=DESKTOP-GE4L5QE;Database=Novovita.by;Trusted_Connection=True;MultipleActiveResultSets=true");
-                optionsBuilder.UseSqlServer("Data Source=localhost;Database=host2803_Novovita.by; Integrated Security=False;User ID=host2803_Admin;User=host2803_Admin;Password=M3h6@9vk;Connect Timeout=15;Encrypt=False;Packet Size=4096");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-GE4L5QE;Database=Novovita.by;Trusted_Connection=True;MultipleActiveResultSets=true");
+                //optionsBuilder.UseSqlServer("Data Source=localhost;Database=host2803_Novovita.by; Integrated Security=False;User ID=host2803_Admin;User=host2803_Admin;Password=M3h6@9vk;Connect Timeout=15;Encrypt=False;Packet Size=4096");
 
             }
         }

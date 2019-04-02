@@ -39,49 +39,58 @@
                                 </div>
                                 <p class="txt-normal">@single.Discription</p>
                                 <div class="news-footer pb-55">
-                                    <div class="share-news">
-                                        <ul class="list-inline text-right">
-                                            <li>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="clr"></div>
-
+                                    @*<div class="share-news">*@
+                                    <div class="ya-share2" data-services="vkontakte,facebook,twitter"></div>
+                                    @*<ul class="list-inline text-right">
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    </li>*@
+                                    @*</ul>*@
                                 </div>
-                                <div class="blog-post owl-carousel pb-50">
-                                    @foreach (var newslist in news)
-                                    {
-                                        <div class="col-md-4">
-                                            <div class="blog-card">
-                                                <a asp-action="SingleNews" asp-route-id="@newslist.Id">
-                                                    <img src="../../images/news/@newslist.Image" alt="">
-                                                </a>
-                                                <div class="blog-text">
-                                                    <div class="date f1 bg3">
-                                                        <p class="fw-6">@newslist.Date.ToString("MMM")</p>
-                                                        <p class="fw-7">@newslist.Date.Day</p>
-                                                    </div>
-                                                    <a href="single-news.html" class="title f1 fw-7 cw">
-                                                        <span>@newslist.Title </span>
-                                                    </a>
+                                <div class="clr"></div>
+
+                            </div>
+                            <div class="blog-post owl-carousel pb-50">
+                                @foreach (var newslist in news)
+                                {
+                                    <div class="col-md-4">
+                                        <div class="blog-card">
+                                            <a asp-action="SingleNews" asp-route-id="@newslist.Id">
+                                                <img src="../../images/news/@newslist.Image" alt="">
+                                            </a>
+                                            <div class="blog-text">
+                                                <div class="date f1 bg3">
+                                                    <p class="fw-6">@newslist.Date.ToString("MMM")</p>
+                                                    <p class="fw-7">@newslist.Date.Day</p>
                                                 </div>
+                                                <a href="single-news.html" class="title f1 fw-7 cw">
+                                                    <span>@newslist.Title </span>
+                                                </a>
                                             </div>
                                         </div>
-                                    }
+                                    </div>
+                                }
 
-                                </div>
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div class="news-sidebar p-40 f1">
+                                <div class="gallery-area clearfix">
+                                    <div class="elfsight-app-3cb56eb4-0d4c-4071-8ec6-628471b34745"></div>
+                                </div>
+                                <div class="Close-spam"></div>
+                            </div>
+                        </div>
+                    </div>
                         
                     </div>
                 </div>

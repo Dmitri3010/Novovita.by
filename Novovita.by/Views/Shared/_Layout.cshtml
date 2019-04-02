@@ -1,4 +1,7 @@
-﻿<html>
+﻿@{ 
+    var categories = ViewData["Categories"] as List<Category>;
+}
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,7 +28,7 @@
                         <span></span>  <span></span>  <span></span>
                     </button>
                     <a class="navbar-brand" asp-action="Index">
-                        <img src="../images/logo.jpg" alt="logo">
+                        <img src="/images/logo.jpg" alt="logo">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-menu">
@@ -70,7 +73,7 @@
                     <div class="col-md-3">
                         <div class="footer-contact f1 col-md-12">
                             <a href="#">
-                                <img src="../images/logo.svg" alt="" style="width:150px">
+                                <img src="/images/logo.svg" alt="" style="width:150px">
                             </a>
                             <ul class="list-inline">
                                 <li>
@@ -107,23 +110,18 @@
 
                             </ul>
                         </div>
-                        @*<div class="fooler-col f1">
-                                <h2 class="footer-title">Каталог</h2>
-                                <ul>
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">Категории продукции</h2>
+                            <ul>
+                                @foreach (var category in categories)
+                                {
                                     <li>
-                                        <a href="#">Recycling</a>
+                                        <a asp-action="Product">@category.Name</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Ecosystem</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Organic</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Biology</a>
-                                    </li>
-                                </ul>
-                            </div>*@
+                                }
+
+                            </ul>
+                        </div>
 
                     </div>
                     <div class="col-md-4 mb-sm-50">
@@ -146,6 +144,8 @@
             </div>
         </div>
     </footer>
+    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="//yastatic.net/share2/share.js"></script>
     <script src="/js/site.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <script src="~/js/jquery-1.12.4.min.js"></script>

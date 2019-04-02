@@ -15,12 +15,15 @@ namespace Novovita.by.Controllers
             var products = Products.Get();
             var news = NewsRepository.Get();
             ViewData["Products"] = products;
+            ViewData["Categories"] = categories;
             ViewData["News"] = news;
             return View();
         }
 
         public IActionResult About()
         {
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             ViewData["Message"] = "Your application description page.";
 
             return View();
@@ -28,18 +31,24 @@ namespace Novovita.by.Controllers
 
         public IActionResult Contacts()
         {
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             return View();
         }
 
         [HttpPost]
         public IActionResult Contacts(EmailMessage emailMessage)
         {
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             EmailSender.Send(emailMessage);
             return View();
         }
 
         public IActionResult News()
         {
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             var news = NewsRepository.Get();
             ViewData["News"] = news;
 
@@ -48,7 +57,8 @@ namespace Novovita.by.Controllers
 
         public IActionResult ContactForm()
         {
-            //ViewData[nameof(EmailMessage)] = new EmailMessage();
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             return PartialView();
         }
 
@@ -62,12 +72,16 @@ namespace Novovita.by.Controllers
             }
             ViewData[nameof(Category)] = categories;
             ViewData["Products"] = products;
+            ViewData["Categories"] = categories;
+
             return View();
 
         }
 
         public IActionResult SingleNews(int id)
         {
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             var news = NewsRepository.Get(id);
             ViewData["News"] = NewsRepository.Get().Take(5).ToList();
             ViewData["Single"] = news;
@@ -101,6 +115,8 @@ namespace Novovita.by.Controllers
             {
                 ViewData["previos"] = product;
             }
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             ViewData["Product"] = product;
             return View();
         }
@@ -111,6 +127,8 @@ namespace Novovita.by.Controllers
             var products = Products.GetFiltered(categoryId);
             var category = Categories.Get(categoryId);
             ViewData["Product"] = products;
+            var categories = Categories.Get();
+            ViewData["Categories"] = categories;
             return PartialView(category);
         }
 

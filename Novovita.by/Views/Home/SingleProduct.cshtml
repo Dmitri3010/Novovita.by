@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     var products = ViewData[nameof(Product)] as List<Product>;
     var next = ViewData["next"] as Product;
     var previos = ViewData["previos"] as Product;
@@ -9,9 +9,6 @@
     <img src="~/images/preloader1.svg" style="width: 300px;height: 300px;top: 50%;position: absolute;left: 50%;margin-left: -150px;margin-top: -150px;">
 </div>
 <div class="page-wrapper">
-   
-    <!-- op-header end -->
-    <!-- page-content start -->
     <div class="page-content">
         <section class="o-band o-band--small pt-50">
             <div class="container">
@@ -45,9 +42,9 @@
                                     {
                                         <p class="c1 pb-20">в наличии</p>
                                     }
-                                    else 
+                                    else
                                     {
-                                    <p class="c1 pb-20">нет наличии</p>
+                                        <p class="c1 pb-20">нет наличии</p>
                                     }
 
                                     <a href="#" class="thm-btn hvr-3 bg3 c4">Оставить заявку</a>
@@ -62,7 +59,7 @@
                             </div>
                             <h3 class="price mb-10 f1 fw-7">240 руб.</h3>
                             <p class="txt-normal">
-                              @single.Discription
+                                @single.Discription
                             </p>
                             <div class="content-footer mt-45">
                                 <div class="content-nav mt-60 f1">
@@ -71,13 +68,13 @@
                                             <h2>
                                                 <a asp-action="SingleProduct" asp-route-id="@previos.Id" class="fw-6 c4">
                                                     <i class="fa fa-angle-left pr-10"></i>
-                                                   Предыдущий 
+                                                    Предыдущий
                                                 </a>
                                             </h2>
                                         </div>
                                         <div class="col-xs-6 text-right">
                                             <h2>
-                                                <a  asp-action="SingleProduct" asp-route-id="@next.Id" class="fw-6 c4">
+                                                <a asp-action="SingleProduct" asp-route-id="@next.Id" class="fw-6 c4">
                                                     Следующий
                                                     <i class="fa fa-angle-right pl-10"></i>
                                                 </a>
@@ -101,7 +98,7 @@
             </div>
             <a href="#" class="thm-btn hvr-2 bg4">Оставить заявку</a>
         </div>
-    </div>    
+    </div>
 </div>
 <div class="back2Top bg1">
     <i class="fa fa-angle-up fa-2x cw"></i>
