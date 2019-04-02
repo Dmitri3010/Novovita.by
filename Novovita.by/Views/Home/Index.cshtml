@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="ms1-item">
-                    <img src="../images/123.png" alt="">
+                    <img src="images/123.png" alt="">
                     <div class="pos-r g-table">
                         <div class="d-middle">
                             <div class="container crop">
@@ -41,12 +41,12 @@
                                     <span class="slider-icon">
                                         <img src="images/logo_white.svg" alt="">
                                     </span>
-                                    <p class="f2 c3 fw-4">Donate and help us change the world</p>
+                                    <p class="f2 c3 fw-4">Лучшие овощи для вас</p>
                                     <div class="head-lines f1 cw mb-50">
-                                        <h1 class="fw-7">Together we</h1>
-                                        <h1 class="fw-7">can bring</h1>
-                                        <h1 class="fw-7">the change</h1>
-                                    </div> <a href="#" class="thm-btn hvr-3 bg3 cw">support us</a>
+                                        <h1 class="fw-7">Фермерское</h1>
+                                        <h1 class="fw-7">хозяйство</h1>
+                                        <h1 class="fw-7">«Нововита»</h1>
+                                    </div> <a href="#" class="thm-btn hvr-3 bg3 cw">Подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                             @foreach (var prod in products)
                             {
                                 <div class="gallery-single">
-                                    <a href="index.html">
+                                    <a asp-action="SingleProduct" asp-route-id="@prod.Id">
                                         <img src="images/products/@prod.MainImage" alt="">
                                         <h3>@prod.Name</h3>
                                         <p class="price">Цена: <strong>@prod.Cost p</strong></p>
@@ -165,10 +165,10 @@
                     <div class="col-lg-6">
                         <div class="volunteer-banner">
                             <div class="section-header">
-                                <h2 class="f2 c3">how we help</h2>
-                                <h1 class="f1 fw-7 cw">Become a volunteer</h1>
+                                <h2 class="f2 c3">Специально для вас</h2>
+                                <h1 class="f1 fw-7 cw">Свежие овощи</h1>
                             </div>
-                            <p class="txt-normal cw">Quisque egestas justo nec hendrerit feugiat duide turpis porttitor sapien egestas sollicitudin nisibero in nunc pellentesque.</p> <a href="#" class="thm-btn hvr-2 bg3">join us now</a>
+                            <p class="txt-normal cw">Место для формы обратной связи и всевозможных акций. Отправьте нам свой вопрос! Мы постараемся ответить как можно быстрее.</p> <a href="#" class="thm-btn hvr-2 bg4">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -320,10 +320,10 @@
                                 <div class="blog-card" style="min-height:300px;">
                                     <div class="blog-text" style="background: url(images/news/@blog.Image);background-size: cover;">
                                         <div class="date f1 bg3">
-                                            <p class="fw-6">Aug</p>
-                                            <p class="fw-7">20</p>
+                                            <p class="fw-6">@blog.Date.ToString("MMM")</p>
+                                            <p class="fw-7">@blog.Date.Day</p>
                                         </div>
-                                        <a href="single-news.html" class="title f1 fw-7 cw">
+                                        <a asp-action="SingleNews" asp-route-id="@blog.Id" class="title f1 fw-7 cw">
                                             <span>@blog.Title</span>
                                         </a>
                                     </div>
@@ -336,108 +336,6 @@
 
             </div>
         </div>
-    </div>
-    <!-- page-content end -->
-    <!-- footer start -->
-    <footer>
-        <div class="footer-middle">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="footer-contact f1 col-md-12">
-                            <a href="#">
-                                <img src="images/logo.svg" alt="" style="width:150px">
-                            </a>
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="#"><i class="c4 fa fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="c4 fa fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="c4 fa fa-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="c4 fa fa-youtube-play"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 clearfix mb-sm-50">
-                        <div class="fooler-col f1">
-                            <h2 class="footer-title">conmpany</h2>
-                            <ul>
-                                <li>
-                                    <a href="#">about</a>
-                                </li>
-                                <li>
-                                    <a href="#">our team</a>
-                                </li>
-                                <li>
-                                    <a href="#">missions</a>
-                                </li>
-                                <li>
-                                    <a href="#">our projects</a>
-                                </li>
-                                <li>
-                                    <a href="#">contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="fooler-col f1">
-                            <h2 class="footer-title">services</h2>
-                            <ul>
-                                <li>
-                                    <a href="#">Recycling</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ecosystem</a>
-                                </li>
-                                <li>
-                                    <a href="#">Organic</a>
-                                </li>
-                                <li>
-                                    <a href="#">Biology</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="fooler-col f1">
-                            <h2 class="footer-title">links</h2>
-                            <ul>
-                                <li>
-                                    <a href="#">Help</a>
-                                </li>
-                                <li>
-                                    <a href="#">Support</a>
-                                </li>
-                                <li>
-                                    <a href="#">Clients</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-sm-50">
-                        <div class="footer-contact">
-                            <h2 class="footer-title">Contact</h2>
-                            <h3>855 Road Broklyn Street, 600 New York, USA</h3>
-                            <ul>
-                                <li><i class="fa fa-envelope"></i> needhelp@novio.com</li>
-                                <li><i class="fa fa-phone-square"></i> 888 999 0000</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom f1">
-            <div class="container">
-                <p>NovoVita © 2018 | Все права защищены</p>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
     </div>
     <!-- page-wrapper end -->
     <div class="back2Top bg1">

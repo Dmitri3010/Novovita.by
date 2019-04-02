@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
-
+﻿@model Novovita.by.Models.EmailMessage
 <body>
     <div class="preloader">
         <img src="~/images/preloader1.svg" style="width: 300px;height: 300px;top: 50%;position: absolute;left: 50%;margin-left: -150px;margin-top: -150px;">
     </div>
     <!-- page-wrapper start -->
-    <div class="page-wrapper">       
+    <div class="page-wrapper">
         <!-- op-header start -->
         <div class="op-header background" style="background: url(../images/ARK_2399.JPG) no-repeat;background-size: cover;">
             <div class="section-header text-center">
@@ -50,19 +49,19 @@
                             <div class="col-md-6">
                                 <div class="col-md-12">
 
-                                    <form>
+                                    <form asp-action="Contacts" asp-controller="Home" asp-anti-forgery="true">
                                         <div class="row">
                                             <div class="col-md-6 mb-30">
-                                                <input type="text" placeholder="Ваше имя *">
+                                                <input asp-for="Name" type="text" placeholder="Ваше имя *" required>
                                             </div>
                                             <div class="col-md-6 mb-30">
-                                                <input type="email" placeholder="Email адрес *">
+                                                <input asp-for="Email" type="email" placeholder="Email адрес *" required>
                                             </div>
                                             <div class="col-md-12 mb-30">
-                                                <input type="text" placeholder="Телефон">
+                                                <input asp-for="Phone" type="text" placeholder="Телефон" required>
                                             </div>
                                             <div class="col-md-12 mb-30">
-                                                <textarea placeholder="Сообщение"></textarea>
+                                                <textarea asp-for="Message" placeholder="Сообщение" required></textarea>
                                             </div>
                                             <div class="col-md-12 text-center">
                                                 <button type="submit" class="thm-btn cw bg2">Отправить сообщение</button>
@@ -76,12 +75,7 @@
                 </div>
                 <div class="contact-bottom">
                     <div class="contact-map-area">
-                        <!-- contact-us-map-area start here-->
-                        <div class="google-map" id="map" data-map-lat="40.720307" data-map-lng="-74.048771" data-icon-path="../images/map-marker.png" data-map-title="Novio" data-map-zoom="12" data-markers='{
-                             "marker-1" : [40.720307, -74.048771,"<h4>Novio, Ecology & Environmental Non-Profit Organization</h4><p>1430 Jersey City, USA</p>" ]
-                             }'/>
-                        </div>
-                        <!-- contact-us-map-area end here-->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.013252804616!2d26.801463215797785!3d52.261304379766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4727f3abc7b3d16b%3A0xe940a834a0e20929!2z0YPQuy4g0JHQsNC20LXQvdC-0LLQvtC5IDYsINCb0YPQvdC40L3QtdGG!5e0!3m2!1sru!2sby!4v1553975599627!5m2!1sru!2sby" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -97,99 +91,6 @@
             </div>
         </div>
         <!-- page-content end -->
-        <!-- footer start -->
-        <footer>
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <a href="#">
-                                <img src="../images/logo/02.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="list-inline text-right">
-                                <li><a href="#"><i class="c4 fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="c4 fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="c4 fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="c4 fa fa-youtube-play"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-middle">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 clearfix">
-                            <div class="fooler-col f1">
-                                <h2 class="footer-title">conmpany</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">about</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">our team</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">missions</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">our projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="fooler-col f1">
-                                <h2 class="footer-title">services</h2>
-                                <ul>
-                                    <li><a href="#">Recycling</a></li>
-                                    <li><a href="#">Ecosystem</a></li>
-                                    <li><a href="#">Organic</a></li>
-                                    <li><a href="#">Biology</a></li>
-                                </ul>
-                            </div>
-                            <div class="fooler-col f1">
-                                <h2 class="footer-title">links</h2>
-                                <ul>
-                                    <li><a href="#">Help</a></li>
-                                    <li><a href="#">Support</a></li>
-                                    <li><a href="#">Clients</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="footer-contact">
-                                <h2 class="footer-title">Contact</h2>
-                                <h3>855 Road Broklyn Street, 600 New York, USA</h3>
-                                <ul>
-                                    <li><i class="fa fa-envelope"></i> needhelp@novio.com</li>
-                                    <li><i class="fa fa-phone-square"></i> 888 999 0000</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="footer-contact f1">
-                                <h2 class="footer-title">newslater</h2>
-                                <form>
-                                    <input type="email" placeholder="Email address">
-                                    <button type="submit">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom f1">
-                <div class="container">
-                    <p>© copyright 2018 by Layerdrops.com</p>
-                </div>
-            </div>
-        </footer>
-        <!-- footer end -->
-
     </div>
     <!-- page-wrapper end -->
 

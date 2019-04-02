@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Novovita.by.Models;
 using Novovita.by.Repository;
@@ -10,6 +11,7 @@ using System.Linq;
 
 namespace Novovita.by.Controllers
 {
+    [Authorize]
     public class AdminController:Controller
     {
         private static string WebRootPath => Statics.WebRootPath;
@@ -139,6 +141,14 @@ namespace Novovita.by.Controllers
             return RedirectToAction(nameof(NewsList));
         }
 
+        [HttpGet]
+        public IActionResult ProductsDelete(int id = -1)
+        {
+            var product = Products.Get(id);
+            Products.Delete(product);
+
+            return RedirectToAction(nameof(ProductsList));
+        }
 
         [HttpGet]
         public IActionResult NewsDelete(int id = -1)

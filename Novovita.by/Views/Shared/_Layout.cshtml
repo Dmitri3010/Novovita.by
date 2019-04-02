@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +7,6 @@
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width, initial-scale=1">
-    @* <title>Novio - Ecology & Environmental Non-Profit Organization</title>*@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="~/images/favicon.png">
@@ -16,11 +14,7 @@
     <link rel="stylesheet" type="text/css" href="~/css/style.css">
     <link rel="stylesheet" type="text/css" href="~/css/effect.css">
     <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
-    <!-- ====== main style end ====== -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
+
 </head>
 <body>
     <header class="header1">
@@ -39,7 +33,7 @@
                         <li>
                             <a asp-action="Product">Продукция</a>
                         </li>
-                       
+
                         <li>
                             <a asp-action="About">О компании</a>
                         </li>
@@ -56,7 +50,8 @@
 
                     </ul>
                     <ul class="nav navbar-nav f1 mainMenu text-capitalize navbar-right">
-                        <li style=""><a href="#" style="padding: 10px 15px !important;background: #83bb25 !important;display: inline-block;margin-top: -10px;color: white;border-radius: 5px;">Написать нам</a></li>
+
+                        <li style=""><a data-toggle="modal" data-target="#exampleModal" href="#" style="padding: 10px 15px !important;background: #83bb25 !important;display: inline-block;margin-top: -10px;color: white;border-radius: 5px;">Написать нам</a></li>
                         <li style="margin-top:-15px"><a href="tel:+375333230407" style="margin-bottom: 7px;">+375333230407</a><a href="tel:+375295425688">+375 295425688</a></li>
                         <li class="hidden-md" style="margin-top:-15px"><a style="margin-bottom: 7px;">market@novovita.by</a><a>export@novovita.by</a></li>
 
@@ -67,120 +62,92 @@
     </header>
     @RenderBody()
     <footer>
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 mb-xs-30">
-                        <a href="#">
-                            <img src="../images/logo/02.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-6">
-                        <ul class="list-inline text-right">
-                            <li>
-                                <a href="#"><i class="c4 fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="c4 fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="c4 fa fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="c4 fa fa-youtube-play"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        @Html.Partial("ContactForm")
         <div class="footer-middle">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 clearfix mb-sm-50">
-                        <div class="fooler-col f1">
-                            <h2 class="footer-title">conmpany</h2>
-                            <ul>
+                    <div class="col-md-3">
+                        <div class="footer-contact f1 col-md-12">
+                            <a href="#">
+                                <img src="../images/logo.svg" alt="" style="width:150px">
+                            </a>
+                            <ul class="list-inline">
                                 <li>
-                                    <a href="#">about</a>
+                                    <a href="#"><i class="c4 fa fa-vk"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#">our team</a>
+                                    <a href="https://www.facebook.com/Novovita365/"><i class="c4 fa fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#">missions</a>
+                                    <a href="https://www.instagram.com/novovita365/"><i class="c4 fa fa-instagram"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#">our projects</a>
-                                </li>
-                                <li>
-                                    <a href="#">contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="fooler-col f1">
-                            <h2 class="footer-title">services</h2>
-                            <ul>
-                                <li>
-                                    <a href="#">Recycling</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ecosystem</a>
-                                </li>
-                                <li>
-                                    <a href="#">Organic</a>
-                                </li>
-                                <li>
-                                    <a href="#">Biology</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="fooler-col f1">
-                            <h2 class="footer-title">links</h2>
-                            <ul>
-                                <li>
-                                    <a href="#">Help</a>
-                                </li>
-                                <li>
-                                    <a href="#">Support</a>
-                                </li>
-                                <li>
-                                    <a href="#">Clients</a>
+                                    <a href="https://www.youtube.com/channel/UCAFZ6wBjdfo0X8ERZIkQM-A"><i class="c4 fa fa-youtube-play"></i></a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-sm-50">
+                    <div class="col-md-5 clearfix mb-sm-50">
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">Карта сайта</h2>
+                            <ul>
+                                <li>
+                                    <a asp-action="About">О нас</a>
+                                </li>
+                                <li>
+                                    <a asp-action="Product">Продукция</a>
+                                </li>
+                                <li>
+                                    <a asp-action="News">Блог</a>
+                                </li>
+                                <li>
+                                    <a asp-action="Contacts">Контакты</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        @*<div class="fooler-col f1">
+                                <h2 class="footer-title">Каталог</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Recycling</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ecosystem</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Organic</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Biology</a>
+                                    </li>
+                                </ul>
+                            </div>*@
+
+                    </div>
+                    <div class="col-md-4 mb-sm-50">
                         <div class="footer-contact">
-                            <h2 class="footer-title">Contact</h2>
-                            <h3>
-                                855 Road Broklyn Street, 600
-                                New York, USA
-                            </h3>
+                            <h2 class="footer-title">Контакты</h2>
+                            <h3>ЮР. АДРЕС: <br>225644 Г.ЛУНИНЕЦ, УЛ. БАЖЕНОВОЙ, 6AБРЕСТСКАЯ ОБЛАСТЬ, РЕСПУБЛИКА БЕЛАРУСЬ. <br>УНП 290118689</h3>
                             <ul>
                                 <li><i class="fa fa-envelope"></i> needhelp@novio.com</li>
-                                <li><i class="fa fa-phone-square"></i> 888 999 0000</li>
+                                <li><i class="fa fa-phone-square"></i>+375 33 323 04 07 <br><i class="fa fa-phone-square"></i>+375 29 542 56 88</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="footer-contact f1">
-                            <h2 class="footer-title">newslater</h2>
-                            <form>
-                                <input type="email" placeholder="Email address">
-                                <button type="submit">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
         <div class="footer-bottom f1">
             <div class="container">
-                <p>© copyright 2018 by Layerdrops.com</p>
+                <p>NovoVita © 2019 | Все права защищены</p>
             </div>
         </div>
     </footer>
+    <script src="/js/site.js"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <script src="~/js/jquery-1.12.4.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
     <script src="~/js/html5lightbox/html5lightbox.js"></script>

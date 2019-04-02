@@ -13,6 +13,6 @@ namespace Novovita.by.Models
 
         public string Image { get; set; }
 
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
     }
 }

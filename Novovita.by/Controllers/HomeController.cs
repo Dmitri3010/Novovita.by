@@ -1,7 +1,9 @@
 ﻿using System.Diagnostics;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Novovita.by.Models;
 using Novovita.by.Repository;
+using Novovita.by.Services;
 
 namespace Novovita.by.Controllers
 {
@@ -13,7 +15,7 @@ namespace Novovita.by.Controllers
             var products = Products.Get();
             var news = NewsRepository.Get();
             ViewData["Products"] = products;
-            ViewData["News"] = news ;
+            ViewData["News"] = news;
             return View();
         }
 
@@ -26,34 +28,92 @@ namespace Novovita.by.Controllers
 
         public IActionResult Contacts()
         {
-            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult Contacts(EmailMessage emailMessage)
+        {
+            EmailSender.Send(emailMessage);
             return View();
         }
 
         public IActionResult News()
         {
             var news = NewsRepository.Get();
+            ViewData["News"] = news;
 
-            return View(news);
+            return View();
+        }
+
+        public IActionResult ContactForm()
+        {
+            //ViewData[nameof(EmailMessage)] = new EmailMessage();
+            return PartialView();
         }
 
         public IActionResult Product()
         {
             var products = Products.Get();
-            return View(products);
+            var categories = Categories.Get();
+            foreach (var prod in products)
+            {
+                prod.Category = Categories.Get(prod.CategoryId);
+            }
+            ViewData[nameof(Category)] = categories;
+            ViewData["Products"] = products;
+            return View();
 
         }
 
         public IActionResult SingleNews(int id)
         {
+            var news = NewsRepository.Get(id);
+            ViewData["News"] = NewsRepository.Get().Take(5).ToList();
+            ViewData["Single"] = news;
             return View();
         }
 
         public IActionResult SingleProduct(int id)
         {
+            var product = Products.Get(id);
+            product.Category = Categories.Get(product.CategoryId);
+            var products = Products.Get();
+            if (Products.Get(id + 1) != null)
+            {
+                var nextProduct = Products.Get(id + 1);
+                nextProduct.Category = Categories.Get(id + 1);
+                ViewData["next"] = nextProduct;
+            }
+            else
+            {
+                ViewData["next"] = product;
+            }
+
+            if (Products.Get(id - 1) != null)
+            {
+                var previosProduct = Products.Get(id - 1);
+                previosProduct.Category = Categories.Get(id - 1);
+                ViewData["previos"] = previosProduct;
+            }
+
+            else
+            {
+                ViewData["previos"] = product;
+            }
+            ViewData["Product"] = product;
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Filtered(int categoryId)
+        {
+            var products = Products.GetFiltered(categoryId);
+            var category = Categories.Get(categoryId);
+            ViewData["Product"] = products;
+            return PartialView(category);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
