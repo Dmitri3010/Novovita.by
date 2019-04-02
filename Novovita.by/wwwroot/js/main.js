@@ -84,7 +84,7 @@ function owlCarouselActivation() {
             smartSpeed: 500,
             nav: true,
             dotsEach: false,
-            items: 2,
+            items: 3,
             responsive: {
                 0 : {
                     margin: 15,
@@ -145,44 +145,23 @@ function owlCarouselActivation() {
             }
         })
     }
-    if ($(".gallery-carousel").length) {
+if ($(".gallery-carousel").length) {
         $(".gallery-carousel").owlCarousel({
             autoplay: true,
-            autoplayTimeout: 4000,
+            autoplayTimeout: 2000,
             loop: true,
             pagination: true,
             touchDrag: true,
             margin: 30,
             stagePadding: 46,
             smartSpeed: 500,
-            nav: true,
+            nav: false,
             dotsEach: false,
             rtl: true,
             items: 1,
             responsive: {
-                0 : {
-                    margin: 15,
-                    autoWidth:false,
-                    center: true,
-                    nav: true,
-                    navElement: "span",
-                    navText: ["<span class='fa fa-angle-left'></span>","<span class='fa fa-angle-right'></span>"],
+                420 : {
                     items: 1
-                },
-                372 : {
-                    margin: 30,
-                    autoWidth:true,
-                    center: false,
-                    nav: true,
-                    navElement: "span",
-                    navText: ["<span class='fa fa-angle-left'></span>","<span class='fa fa-angle-right'></span>"],
-                    items: 1
-                },
-				420 : {
-                    items: 1,nav: true,
-                    navElement: "span",
-                    navText: ["<span class='fa fa-angle-left'></span>","<span class='fa fa-angle-right'></span>"],
-					
                 },
                 421 : {
                     items: 2
