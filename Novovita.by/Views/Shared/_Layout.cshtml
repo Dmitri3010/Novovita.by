@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +7,6 @@
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width, initial-scale=1">
-    @* <title>Novio - Ecology & Environmental Non-Profit Organization</title>*@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="~/images/favicon.png">
@@ -16,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="~/css/style.css">
     <link rel="stylesheet" type="text/css" href="~/css/effect.css">
     <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
-    
+
 </head>
 <body>
     <header class="header1">
@@ -52,7 +50,8 @@
 
                     </ul>
                     <ul class="nav navbar-nav f1 mainMenu text-capitalize navbar-right">
-                        <li style=""><a href="#" style="padding: 10px 15px !important;background: #83bb25 !important;display: inline-block;margin-top: -10px;color: white;border-radius: 5px;">Написать нам</a></li>
+
+                        <li style=""><a data-toggle="modal" data-target="#exampleModal" href="#" style="padding: 10px 15px !important;background: #83bb25 !important;display: inline-block;margin-top: -10px;color: white;border-radius: 5px;">Написать нам</a></li>
                         <li style="margin-top:-15px"><a href="tel:+375333230407" style="margin-bottom: 7px;">+375333230407</a><a href="tel:+375295425688">+375 295425688</a></li>
                         <li class="hidden-md" style="margin-top:-15px"><a style="margin-bottom: 7px;">market@novovita.by</a><a>export@novovita.by</a></li>
 
@@ -63,13 +62,15 @@
     </header>
     @RenderBody()
     <footer>
+
+        @Html.Partial("ContactForm")
         <div class="footer-middle">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="footer-contact f1 col-md-12">
                             <a href="#">
-                                <img src="img/logo.svg" alt="" style="width:150px">
+                                <img src="../images/logo.svg" alt="" style="width:150px">
                             </a>
                             <ul class="list-inline">
                                 <li>
@@ -92,39 +93,37 @@
                             <h2 class="footer-title">Карта сайта</h2>
                             <ul>
                                 <li>
-                                    <a href="#">about</a>
+                                    <a asp-action="About">О нас</a>
                                 </li>
                                 <li>
-                                    <a href="#">our team</a>
+                                    <a asp-action="Product">Продукция</a>
                                 </li>
                                 <li>
-                                    <a href="#">missions</a>
+                                    <a asp-action="News">Блог</a>
                                 </li>
                                 <li>
-                                    <a href="#">our projects</a>
+                                    <a asp-action="Contacts">Контакты</a>
                                 </li>
-                                <li>
-                                    <a href="#">contact</a>
-                                </li>
+
                             </ul>
                         </div>
-                        <div class="fooler-col f1">
-                            <h2 class="footer-title">Каталог</h2>
-                            <ul>
-                                <li>
-                                    <a href="#">Recycling</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ecosystem</a>
-                                </li>
-                                <li>
-                                    <a href="#">Organic</a>
-                                </li>
-                                <li>
-                                    <a href="#">Biology</a>
-                                </li>
-                            </ul>
-                        </div>
+                        @*<div class="fooler-col f1">
+                                <h2 class="footer-title">Каталог</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Recycling</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ecosystem</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Organic</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Biology</a>
+                                    </li>
+                                </ul>
+                            </div>*@
 
                     </div>
                     <div class="col-md-4 mb-sm-50">
@@ -133,7 +132,7 @@
                             <h3>ЮР. АДРЕС: <br>225644 Г.ЛУНИНЕЦ, УЛ. БАЖЕНОВОЙ, 6AБРЕСТСКАЯ ОБЛАСТЬ, РЕСПУБЛИКА БЕЛАРУСЬ. <br>УНП 290118689</h3>
                             <ul>
                                 <li><i class="fa fa-envelope"></i> needhelp@novio.com</li>
-                                <li><i class="fa fa-phone-square"></i>+375 33 323 04 07 <br>+375 29 542 56 88</li>
+                                <li><i class="fa fa-phone-square"></i>+375 33 323 04 07 <br><i class="fa fa-phone-square"></i>+375 29 542 56 88</li>
                             </ul>
                         </div>
                     </div>

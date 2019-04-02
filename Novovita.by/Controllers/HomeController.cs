@@ -41,20 +41,28 @@ namespace Novovita.by.Controllers
         public IActionResult News()
         {
             var news = NewsRepository.Get();
+            ViewData["News"] = news;
 
-            return View(news);
+            return View();
+        }
+
+        public IActionResult ContactForm()
+        {
+            //ViewData[nameof(EmailMessage)] = new EmailMessage();
+            return PartialView();
         }
 
         public IActionResult Product()
         {
             var products = Products.Get();
             var categories = Categories.Get();
-            foreach(var prod in products)
+            foreach (var prod in products)
             {
                 prod.Category = Categories.Get(prod.CategoryId);
             }
             ViewData[nameof(Category)] = categories;
-            return View(products);
+            ViewData["Products"] = products;
+            return View();
 
         }
 
@@ -62,7 +70,8 @@ namespace Novovita.by.Controllers
         {
             var news = NewsRepository.Get(id);
             ViewData["News"] = NewsRepository.Get().Take(5).ToList();
-            return View(news);
+            ViewData["Single"] = news;
+            return View();
         }
 
         public IActionResult SingleProduct(int id)
@@ -92,8 +101,8 @@ namespace Novovita.by.Controllers
             {
                 ViewData["previos"] = product;
             }
-
-            return View(product);
+            ViewData["Product"] = product;
+            return View();
         }
 
         [HttpGet]
