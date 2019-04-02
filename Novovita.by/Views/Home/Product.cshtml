@@ -1,7 +1,7 @@
-﻿@model IEnumerable<Novovita.by.Models.Product>
-@{
+﻿@{
     var categories = ViewData[nameof(Category)] as List<Category>;
     var catId = ViewData["categoryid"] as int?;
+    var products = ViewData["Products"] as List<Product>;
 
 }
 

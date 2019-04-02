@@ -1,8 +1,8 @@
-﻿@model Novovita.by.Models.Product
-@{ 
+﻿@{ 
     var products = ViewData[nameof(Product)] as List<Product>;
     var next = ViewData["next"] as Product;
     var previos = ViewData["previos"] as Product;
+    var single = ViewData["Product"] as Product;
 }
 
 <div class="preloader">
@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-md-7 mt-20">
                                 <a asp-action="Product">
-                                    <h2 class="f1 fw-7 c4">@Model.Category.Name</h2>
+                                    <h2 class="f1 fw-7 c4">@single.Category.Name</h2>
                                 </a>
                             </div>
                             <div class="col-md-5 offset-lg-1 text-right">
@@ -38,10 +38,10 @@
                         <div class="project-sidebar">
                             <div class="project-single">
                                 <div class="img-box">
-                                    <img src="~/images/products/@Model.MainImage" alt="">
+                                    <img src="~/images/products/@single.MainImage" alt="">
                                 </div>
                                 <div class="project-card text-center">
-                                    @if (Model.Count > 0)
+                                    @if (single.Count > 0)
                                     {
                                         <p class="c1 pb-20">в наличии</p>
                                     }
@@ -58,11 +58,11 @@
                     <div class="col-md-8">
                         <div class="single-project-content">
                             <div class="section-header mb-30">
-                                <h1 class="f1 fw-7 row ">@Model.Name</h1>
+                                <h1 class="f1 fw-7 row ">@single.Name</h1>
                             </div>
                             <h3 class="price mb-10 f1 fw-7">240 руб.</h3>
                             <p class="txt-normal">
-                              @Model.Discription
+                              @single.Discription
                             </p>
                             <div class="content-footer mt-45">
                                 <div class="content-nav mt-60 f1">
@@ -101,13 +101,8 @@
             </div>
             <a href="#" class="thm-btn hvr-2 bg4">Оставить заявку</a>
         </div>
-    </div>
-    <!-- page-content end -->
-    <!-- footer start -->
-    
-    <!-- footer end -->
+    </div>    
 </div>
-<!-- page-wrapper end -->
 <div class="back2Top bg1">
     <i class="fa fa-angle-up fa-2x cw"></i>
 </div>

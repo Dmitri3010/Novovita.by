@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Novovita.by.Models.News>
+﻿@{
+    var newsList = ViewData["News"] as List<News>;
+}
 <body>
     <div class="preloader">
         <img src="~/images/preloader1.svg" style="width: 300px;height: 300px;top: 50%;position: absolute;left: 50%;margin-left: -150px;margin-top: -150px;">
@@ -8,8 +10,8 @@
         <!-- op-header start -->
         <div class="op-header background">
             <div class="section-header text-center">
-                <h2 class="f2 c3">news & articles</h2>
-                <h1 class="f1 fw-7 cw">Recent posts and updates</h1>
+                <h2 class="f2 c3">Новости</h2>
+                <h1 class="f1 fw-7 cw">Последние новости и обновления</h1>
             </div>
         </div>
         <!-- op-header end -->
@@ -19,7 +21,7 @@
                 <div class="container">
                     <div class="row clearfix">
                         <div class="col-md-8">
-                            @foreach (var news in Model)
+                            @foreach (var news in newsList)
                             {
                                 <div class="col-lg-6 col-sm-6 my-30">
 
@@ -69,11 +71,7 @@
             <a href="#" class="thm-btn hvr-2 bg4">Оставить заявку</a>
         </div>
     </div>
-    <!-- page-content end -->
-    <!-- footer start -->
-    <!-- footer end -->
-    </div>
-    <!-- page-wrapper end -->
+    
     <div class="back2Top bg1">
         <i class="fa fa-angle-up fa-2x cw"></i>
     </div>

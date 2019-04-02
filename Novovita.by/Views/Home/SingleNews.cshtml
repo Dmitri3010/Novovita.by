@@ -1,6 +1,6 @@
-﻿@model Novovita.by.Models.News
-@{ 
+﻿@{ 
     var news = ViewData["News"] as List<News>;
+    var single = ViewData["Single"] as News;
 }
 
 <body>
@@ -26,18 +26,18 @@
                             <div class="single-news-content">
                                 <div class="card-thumb mb-25">
                                     <div class="date f1 c4">
-                                        <p>@Model.Date.ToString("MMM")</p>
-                                        <p>@Model.Date.Day</p>
+                                        <p>@single.Date.ToString("MMM")</p>
+                                        <p>@single.Date.Day</p>
                                     </div>
-                                    <img src="../../images/news/@Model.Image" alt="">
+                                    <img src="../../images/news/@single.Image" alt="">
                                 </div>
                                 <div class="card-txt">
 
                                     <h2 class="card-title f1 fw-7">
-                                        @Model.Title
+                                        @single.Title
                                     </h2>
                                 </div>
-                                <p class="txt-normal">@Model.Discription</p>
+                                <p class="txt-normal">@single.Discription</p>
                                 <div class="news-footer pb-55">
                                     <div class="share-news">
                                         <ul class="list-inline text-right">

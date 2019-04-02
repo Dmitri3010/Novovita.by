@@ -52,16 +52,16 @@
                                     <form asp-action="Contacts" asp-controller="Home" asp-anti-forgery="true">
                                         <div class="row">
                                             <div class="col-md-6 mb-30">
-                                                <input asp-for="Name" type="text" placeholder="Ваше имя *">
+                                                <input asp-for="Name" type="text" placeholder="Ваше имя *" required>
                                             </div>
                                             <div class="col-md-6 mb-30">
-                                                <input asp-for="Email" type="email" placeholder="Email адрес *">
+                                                <input asp-for="Email" type="email" placeholder="Email адрес *" required>
                                             </div>
                                             <div class="col-md-12 mb-30">
-                                                <input asp-for="Phone" type="text" placeholder="Телефон">
+                                                <input asp-for="Phone" type="text" placeholder="Телефон" required>
                                             </div>
                                             <div class="col-md-12 mb-30">
-                                                <textarea asp-for="Message" placeholder="Сообщение"></textarea>
+                                                <textarea asp-for="Message" placeholder="Сообщение" required></textarea>
                                             </div>
                                             <div class="col-md-12 text-center">
                                                 <button type="submit" class="thm-btn cw bg2">Отправить сообщение</button>

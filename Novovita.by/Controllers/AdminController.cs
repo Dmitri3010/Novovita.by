@@ -141,6 +141,14 @@ namespace Novovita.by.Controllers
             return RedirectToAction(nameof(NewsList));
         }
 
+        [HttpGet]
+        public IActionResult ProductsDelete(int id = -1)
+        {
+            var product = Products.Get(id);
+            Products.Delete(product);
+
+            return RedirectToAction(nameof(ProductsList));
+        }
 
         [HttpGet]
         public IActionResult NewsDelete(int id = -1)
