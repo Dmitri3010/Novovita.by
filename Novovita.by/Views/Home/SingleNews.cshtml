@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     var news = ViewData["News"] as List<News>;
     var single = ViewData["Single"] as News;
 }
@@ -39,25 +39,9 @@
                                 </div>
                                 <p class="txt-normal">@single.Discription</p>
                                 <div class="news-footer pb-55">
-                                    @*<div class="share-news">*@
                                     <div class="ya-share2" data-services="vkontakte,facebook,twitter"></div>
-                                    @*<ul class="list-inline text-right">
-                    <li>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                    </li>*@
-                                    @*</ul>*@
                                 </div>
                                 <div class="clr"></div>
-
                             </div>
                             <div class="blog-post owl-carousel pb-50">
                                 @foreach (var newslist in news)
@@ -91,26 +75,22 @@
                             </div>
                         </div>
                     </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="feedback_form mb-100 text-center">
-                <div class="section-header text-center pb-25">
-                    <h2 class="f2 c3">есть вопросы?</h2>
-                    <h1 class="f1 fw-7 cw pb-20">Свяжитесь с нами</h1>
-                    <a href="tel:+375333230407">+375333230407  </a> | <br class="hidden-md hidden-lg">
-                    <a href="tel:+375295425688"> +375 295425688</a>
 
                 </div>
-                <a href="#" class="thm-btn hvr-2 bg4">Оставить заявку</a>
             </div>
         </div>
-        <!-- page-content end -->
-        <!-- footer start -->
-       
+        <div class="feedback_form mb-100 text-center">
+            <div class="section-header text-center pb-25">
+                <h2 class="f2 c3">есть вопросы?</h2>
+                <h1 class="f1 fw-7 cw pb-20">Свяжитесь с нами</h1>
+                <a href="tel:+375333230407">+375333230407  </a> | <br class="hidden-md hidden-lg">
+                <a href="tel:+375295425688"> +375 295425688</a>
+
+            </div>
+            <a data-toggle="modal" data-target="#exampleModal" href="#" class="thm-btn hvr-2 bg4">Оставить заявку</a>
+        </div>
     </div>
-    <!-- page-wrapper end -->
+
     <div class="back2Top bg1">
         <i class="fa fa-angle-up fa-2x cw"></i>
     </div>
