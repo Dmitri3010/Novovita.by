@@ -144,22 +144,30 @@
             </div>
         </div>
     </footer>
-    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-    <script src="//yastatic.net/share2/share.js"></script>
-    <script src="/js/site.js"></script>
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <script src="~/js/jquery-1.12.4.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
-    <script src="~/js/html5lightbox/html5lightbox.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/owl.carousel.js"></script>
-    <script src="~/js/numscroller-1.0.js"></script>
-    <script src="~/js/jquery.countdown.min.js"></script>
-    <script src="~/js/jquery.enllax.min.js"></script>
-    <script src="~/js/isotope.js"></script>
-    <script src="~/js/magnific-popup.js"></script>
-    <script src="~/js/main.js"></script>
+    @*<— BEGIN JIVOSITE CODE {literal} —>*@
+        <script type='text/javascript'>
+            (function () {
+                var widget_id = 'rPF173c8qg'; var d = document; var w = window; function l() {
+                    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/' + widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);
+                } if (d.readyState == 'complete') { l(); } else { if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } }
+            })();</script>
+        @*<!— {/literal} END JIVOSITE CODE —>*@
+        <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+        <script src="//yastatic.net/share2/share.js"></script>
+        <script src="/js/site.js"></script>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <script src="~/js/jquery-1.12.4.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+        <script src="~/js/html5lightbox/html5lightbox.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/owl.carousel.js"></script>
+        <script src="~/js/numscroller-1.0.js"></script>
+        <script src="~/js/jquery.countdown.min.js"></script>
+        <script src="~/js/jquery.enllax.min.js"></script>
+        <script src="~/js/isotope.js"></script>
+        <script src="~/js/magnific-popup.js"></script>
+        <script src="~/js/main.js"></script>
 
-    @RenderSection("Scripts", required: false)
+        @RenderSection("Scripts", required: false)
 </body>
 </html>
