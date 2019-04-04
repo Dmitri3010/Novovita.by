@@ -1,6 +1,7 @@
 ﻿@{
     var products = ViewData["Products"] as List<Product>;
     var news = ViewData["News"] as List<News>;
+    var slider = ViewData["Slider"] as List<MainSlider>;
 
 }
 <body>
@@ -12,27 +13,31 @@
         <!-- main-slider start -->
         <div class="main-slider ms1">
             <div class="banner-carousel owl-carousel">
-                <div class="ms1-item">
-                    <img src="images/123.png" alt="">
-                    <div class="pos-r g-table">
-                        <div class="d-middle">
-                            <div class="container crop">
-                                <div class="item-inner">
-                                    <span class="slider-icon">
-                                        <img src="images/logo_white.svg" alt="">
-                                    </span>
-                                    <p class="f2 c3 fw-4">Специально для вас</p>
-                                    <div class="head-lines f1 cw mb-55">
-                                        <h1 class="fw-7">Картофель «черри»</h1>
-                                        <h1 class="fw-7">в пакете </h1>
-                                        <h1 class="fw-7">по 1 кг.</h1>
-                                    </div> <a asp-action="Product" class="thm-btn hvr-3 bg3 c4">Попробовать</a>
+                @foreach (var slide in slider)
+                {
+                    <div class="ms1-item">
+                        <img src="/images/slider/@slide.Image" alt="">
+                        <div class="pos-r g-table">
+                            <div class="d-middle">
+                                <div class="container crop">
+                                    <div class="item-inner">
+                                        <span class="slider-icon">
+                                            <img src="images/logo_white.svg" alt="">
+                                        </span>
+                                        <p class="f2 c3 fw-4">@slide.Title</p>
+                                        <div class="head-lines f1 cw mb-55">
+                                            <h1 class="fw-7">@slide.Substring_1</h1>
+                                            <h1 class="fw-7">@slide.Substring_2 </h1>
+                                            <h1 class="fw-7">@slide.Substring_3</h1>
+                                        </div> <a href="@slide.URL" class="thm-btn hvr-3 bg3 c4">Перейти</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="ms1-item">
+                }
+
+                @*<div class="ms1-item">
                     <img src="images/slider2.png" alt="">
                     <div class="pos-r g-table">
                         <div class="d-middle">
@@ -51,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
         <!-- main-slider end -->

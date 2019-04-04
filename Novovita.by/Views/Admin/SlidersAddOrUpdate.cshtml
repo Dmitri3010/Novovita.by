@@ -1,0 +1,57 @@
+﻿@model Novovita.by.Models.MainSlider
+
+@{
+    ViewData["Title"] = "Добавление блока в слайдере";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Добавление блока в слайдере</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SlidersAddOrUpdate" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" class="form-control" type="hidden" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"> заголовок</label>
+                <textarea asp-for="Title" class="form-control"></textarea>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Картинка</label>
+                <input type="file" name="mainfile">
+                <p class="help-block">Выберите новую картинку или оставьте пустым, если не хотите менять картинку.</p>
+            </div>
+            <input asp-for="Image" class="form-control" type="hidden" />
+            <div class="form-group">
+                <label asp-for="Substring_1" class="control-label"> 1-я строка</label>
+                <textarea asp-for="Substring_1" class="form-control"></textarea>
+                <span asp-validation-for="Substring_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Substring_2" class="control-label"> 2-я строка</label>
+                <textarea asp-for="Substring_2" class="form-control"></textarea>
+                <span asp-validation-for="Substring_2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Substring_3" class="control-label"> 3-я строка</label>
+                <textarea asp-for="Substring_3" class="form-control"></textarea>
+                <span asp-validation-for="Substring_3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="URL" class="control-label">ссылка на товар или на новость</label>
+                <textarea asp-for="URL" class="form-control"></textarea>
+                <span asp-validation-for="URL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-default" asp-action="MainSliderList">Вернуться к списку</a>
+</div>
+

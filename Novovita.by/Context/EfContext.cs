@@ -15,6 +15,8 @@ namespace Novovita.by.Context
 
         public DbSet<News> News { get; set; }
 
+        public DbSet<MainSlider> MainSliders { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

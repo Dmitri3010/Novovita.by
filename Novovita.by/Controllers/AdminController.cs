@@ -155,9 +155,45 @@ namespace Novovita.by.Controllers
         {
             var news = NewsRepository.Get(id);
             NewsRepository.Delete(news);
-            
+
             return RedirectToAction(nameof(NewsList));
         }
+
+
+        public IActionResult MainSliderList()
+        {
+            var slider = SliderItems.Get();
+            return View(slider);
+        }
+
+        [HttpGet]
+        public IActionResult SlidersAddOrUpdate(int id = -1)
+        {
+
+            ViewData[nameof(MainSlider)] = SliderItems.Get();
+            return View(SliderItems.Get(id));
+        }
+
+        [HttpPost]
+        public IActionResult SlidersAddOrUpdate(MainSlider slider, IFormFile mainfile)
+        {
+
+            slider.Image = SaveFile(mainfile, "slider") ?? slider.Image;
+
+            SliderItems.AddOrUpdate(slider);
+
+            return RedirectToAction(nameof(MainSliderList));
+        }
+
+        [HttpGet]
+        public IActionResult SliderDelete(int id = -1)
+        {
+            var slider = SliderItems.Get(id);
+            SliderItems.Delete(slider);
+
+            return RedirectToAction(nameof(MainSliderList));
+        }
+
 
 
 

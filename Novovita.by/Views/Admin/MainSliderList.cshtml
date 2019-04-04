@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Novovita.by.Models.MainSlider>
+@{
+    ViewData["Title"] = "Главный слайдер";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var counter = 0;
+}
+<h2>Новости</h2>
+<p>
+    <a asp-action="SlidersAddOrUpdate">Создать новый блок для слайдера</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                №
+            </th>
+            <th>
+                Главный заголовок
+            </th>
+            <th>
+                Изображение
+            </th>
+            <th>
+                Заголовок1
+            </th>
+            <th>
+                Заголовок2
+            </th>
+            <th>
+                Заголовок3
+            </th>
+
+            <th>
+                ссылка
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @(++counter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <img src="~/images/slider/@item.Image" width="200" />
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Substring_1)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Substring_2)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Substring_3)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.URL)
+            </th>
+
+            <td>
+                @Html.ActionLink("Удалить", "SliderDelete", new { id = item.Id }, new { onclick = "return confirm('Вы действительно хотите удалить?');" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

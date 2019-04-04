@@ -53,6 +53,29 @@ namespace Novovita.by.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("Novovita.by.Models.MainSlider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Image");
+
+                    b.Property<string>("Substring_1");
+
+                    b.Property<string>("Substring_2");
+
+                    b.Property<string>("Substring_3");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("URL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MainSliders");
+                });
+
             modelBuilder.Entity("Novovita.by.Models.News", b =>
                 {
                     b.Property<int>("Id")

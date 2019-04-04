@@ -14,9 +14,11 @@ namespace Novovita.by.Controllers
             var categories = Categories.Get();
             var products = Products.Get();
             var news = NewsRepository.Get();
+            var slider = SliderItems.Get();
             ViewData["Products"] = products;
             ViewData["Categories"] = categories;
             ViewData["News"] = news;
+            ViewData["Slider"] = slider;
             return View();
         }
 
