@@ -58,7 +58,7 @@
                                                 <input asp-for="Email" type="email" placeholder="Email адрес *" required>
                                             </div>
                                             <div class="col-md-12 mb-30">
-                                                <input asp-for="Phone" type="text" placeholder="Телефон" required>
+                                                <input asp-for="Phone" type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12" minlength="7" placeholder="Телефон" required>
                                             </div>
                                             <div class="col-md-12 mb-30">
                                                 <textarea asp-for="Message" placeholder="Сообщение" required></textarea>

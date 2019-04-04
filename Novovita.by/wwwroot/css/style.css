@@ -1816,7 +1816,7 @@
 
     .title span {
         font-size: 26px;
-        ;
+        background: #147635;
     }
 
 .blog-card:hover .title {
@@ -2184,6 +2184,7 @@
         position: absolute;
         bottom: 35px;
         left: 10px;
+        text-align: left;
     }
 
     .gallery-single .availability {
@@ -2888,9 +2889,9 @@ footer {
     font-weight: 600;
 }
 
-    .footer-contact ul li i {
-        font-size: 34px;
-        color: #6abe52;
+    .footer-contact ul li a i {
+        font-size: 16px;
+        line-height: 45px;
     }
 
 .footer-contact ul {
