@@ -1107,6 +1107,7 @@
   .slider-icon {
     width: 160px;
     height: 59px;
+    margin-top:25px;
   }
 
   .slider-icon i {

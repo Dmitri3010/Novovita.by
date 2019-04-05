@@ -2952,6 +2952,10 @@ footer {
     height: auto;
 }
 
+.gallery-single img {
+    max-height: 375px;
+}
+
 /************************************/
 
 /* 18 - FOOTER END */
